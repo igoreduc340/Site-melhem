@@ -145,16 +145,22 @@
     font-style: normal;
     font-weight: 600;
     line-height: 45.5px;
-    letter-spacing: 10.5px;
+    letter-spacing: 5.5px;
 }
 
 .box_search .text_meio {
-    letter-spacing: 15.2px;
+    letter-spacing: 2.2px;
 }
 
 .box_search .text_voce {
     color: #363636;
+    letter-spacing: 2.2px;
 }
+
+.box_search .text_inicio {
+    letter-spacing: 2.2px;
+}
+
 
 #btn_alugar, #btn_comprar {
     color: #A39A9A;
