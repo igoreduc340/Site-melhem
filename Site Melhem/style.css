@@ -18,6 +18,7 @@
 }
 
 #logo {
+    display: block;
     width: 320px;
     height: 67.89px;
     position: relative;
