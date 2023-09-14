@@ -76,4 +76,12 @@
     position: relative;
     top: 50px;
     border-bottom: 1px solid #0000002c;
-  }
+}
+
+/* estilando o conteudo da pagina inicial */
+#conteudo {
+    width: 85%;
+    margin: 0px auto;
+    height: 100vh;
+    background-color: red;
+}    

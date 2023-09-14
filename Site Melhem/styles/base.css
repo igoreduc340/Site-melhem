@@ -8,10 +8,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
  
-
+/* Estilando o Header */
 #header {
     width: 100%;
     height: 27vh;
@@ -156,4 +156,109 @@ body {
     list-style: none; /* Remove o marcador de lista */
     padding: 0; /* Remove o preenchimento padrão da lista */
     margin: 0; /* Remove a margem padrão da lista */
+}
+
+/* Estilando o Footer das paginas */
+
+.footer {
+    background: #333;
+    color: #fff;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    gap: 90px;
+}
+
+/* Logo do rodapé */
+.footer #logo_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+}
+
+.footer #logo_footer img {
+    width: 119px;
+    height: 119px;
+}
+
+.footer span {
+    font-weight: 200;
+}
+
+/* sobre a Melhem */
+.footer #sobre_melhem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #sobre_melhem h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #sobre_melhem span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Localização */
+.footer #localizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #localizacao h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #localizacao span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Contattos */
+.footer #contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #contatos h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #contatos h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer #contatos span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Segue a gente */
+.footer #segue_gente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #segue_gente h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
