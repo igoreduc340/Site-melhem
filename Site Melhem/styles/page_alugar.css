@@ -57,3 +57,34 @@
 .btn:hover {
     background-color: #440000;
 }
+
+/* Estilo para o container da barra de pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 80px; /* Altura da barra de pesquisa */
+}
+
+/* Estilo para a caixa de entrada de pesquisa */
+.search-input {
+    padding: 10px; /* Espaçamento interno para a caixa de entrada */
+    border: 1px solid #ccc; /* Borda da caixa de entrada */
+    border-radius: 4px; /* Cantos arredondados */
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+/* Estilo para o botão de pesquisa */
+.search-button {
+    padding: 10px 20px; /* Espaçamento interno para o botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+}
+
+/* Estilização quando o botão é hover (passar o mouse por cima) */
+.search-button:hover {
+    background-color: #0056b3; /* Cor de fundo alterada no hover */
+}
