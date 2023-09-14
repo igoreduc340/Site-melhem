@@ -1,0 +1,87 @@
+#background_search {
+    width: 100%;
+    position: absolute;
+    height: 726px;
+    float: left;
+}
+
+ main {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 3000px;
+ }
+
+#conteiner_search {
+    padding: 30px;
+    background: #f5f5f5 url(../images/mulher-background-cortada.png) no-repeat right ;
+    background-color: #f5f5f5;
+}
+
+.box_search {
+    width: 604px;
+    height: 660px;
+    background: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    right: 250px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 6px 3px #2828284b;
+    z-index: 0;
+    padding: 30px 42px 30px 43px ;
+}
+
+.box_search h1 {
+    color: #818080;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45.5px;
+    letter-spacing: 5.5px;
+}
+
+.box_search .text_meio {
+    letter-spacing: 2.2px;
+}
+
+.box_search .text_voce {
+    color: #363636;
+    letter-spacing: 2.2px;
+}
+
+.box_search .text_inicio {
+    letter-spacing: 2.2px;
+}
+
+
+#btn_alugar, #btn_comprar {
+    color: #A39A9A;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 90% */
+    letter-spacing: 1.5px; 
+    position: relative;
+    top: 37px;
+    padding-right:25px;
+    text-decoration: none;
+}
+
+#btn_alugar {
+    color: #3F3D3D;
+    font-weight: 600;
+}
+
+#linha {
+    width: 100%;
+    position: relative;
+    top: 50px;
+    border-bottom: 1px solid #0000002c;
+}
+
+/* estilando o conteudo da pagina inicial */
+#conteudo {
+    width: 85%;
+    margin: 0px auto;
+    height: 100vh;
+    background-color: red;
+}    

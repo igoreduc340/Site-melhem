@@ -8,9 +8,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD:Site Melhem/style.css
     background-color: #ffffff;
+=======
+    background-color: #f5f5f5;
+>>>>>>> 3c384ffd37451f5a6b16a0c658f8af139f9e6303:Site Melhem/styles/base.css
 }
-
+ 
+/* Estilando o Header */
 #header {
     width: 100%;
     height: 27vh;
@@ -114,87 +119,8 @@ body {
     display: block;
 }
 
-#background_search {
-    width: 100%;
-    position: absolute;
-    height: 726px;
-    float: left;
-}
-
- main {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 3000px;
- }
-
-#conteiner_search {
-    padding: 30px;
-    background: #f5f5f5 url(images/mulher-background-cortada.png) no-repeat right ;
-    background-color: #f5f5f5;
-}
-
-.box_search {
-    width: 604px;
-    height: 660px;
-    background: #ffffff;
-    margin: 0 auto;
-    position: relative;
-    right: 250px;
-    border-radius: 10px;
-    box-shadow: 7px 7px 6px 3px #2828284b;
-    z-index: 0;
-    padding: 30px 42px 30px 43px ;
-}
-
-.box_search h1 {
-    color: #818080;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 45.5px;
-    letter-spacing: 5.5px;
-}
-
-.box_search .text_meio {
-    letter-spacing: 2.2px;
-}
-
-.box_search .text_voce {
-    color: #363636;
-    letter-spacing: 2.2px;
-}
-
-.box_search .text_inicio {
-    letter-spacing: 2.2px;
-}
-
-
-#btn_alugar, #btn_comprar {
-    color: #A39A9A;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px; /* 90% */
-    letter-spacing: 1.5px; 
-    position: relative;
-    top: 37px;
-    padding-right:25px;
-    text-decoration: none;
-}
-
-#btn_alugar {
-    color: #3F3D3D;
-    font-weight: 600;
-}
-
-#linha {
-    width: 100%;
-    position: relative;
-    top: 50px;
-    border-bottom: 1px solid #0000002c;
-  }
-  /* Estilos para o menu dropdown */
-.menu-dropdown {
+ /* Estilos para o menu dropdown */
+ .menu-dropdown {
     position: relative;
     display: inline-block;
 }
@@ -235,62 +161,85 @@ body {
     padding: 0; /* Remove o preenchimento padrão da lista */
     margin: 0; /* Remove a margem padrão da lista */
 }
+<<<<<<< HEAD:Site Melhem/style.css
 .property-listing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     margin: 70px 40px;
     height: 500px
+=======
+
+/* Estilando o Footer das paginas */
+
+.footer {
+    background: #333;
+    color: #fff;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    gap: 90px;
+>>>>>>> 3c384ffd37451f5a6b16a0c658f8af139f9e6303:Site Melhem/styles/base.css
 }
 
-
-.property {
+/* Logo do rodapé */
+.footer #logo_footer {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    gap: 3px;
+    align-items: center;
 }
 
-.property h2{
-    margin-top: 30px;
-    margin-bottom: 15px;
-
+.footer #logo_footer img {
+    width: 119px;
+    height: 119px;
 }
-.property .price{
+
+.footer span {
+    font-weight: 200;
+}
+
+/* sobre a Melhem */
+.footer #sobre_melhem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #sobre_melhem h3 {
     font-size: 24px;
-    color:#3c3c3c
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-
-.property:hover {
-    transform: translateY(-5px);
+.footer #sobre_melhem span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
 }
 
-.property img {
-    max-width: 100%;
+/* Localização */
+.footer #localizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.price {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
+.footer #localizacao h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #000000;
-    color: #fff;
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.footer #localizacao span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
 }
 
+<<<<<<< HEAD:Site Melhem/style.css
 .btn:hover {
     background-color: #440000;
 }
@@ -340,3 +289,41 @@ body{
   transform: translate(-50%, -50%);
 }
 
+=======
+/* Contattos */
+.footer #contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #contatos h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #contatos h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer #contatos span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Segue a gente */
+.footer #segue_gente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #segue_gente h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+>>>>>>> 3c384ffd37451f5a6b16a0c658f8af139f9e6303:Site Melhem/styles/base.css
