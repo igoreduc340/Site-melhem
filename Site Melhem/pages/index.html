@@ -27,7 +27,7 @@
     <div id="header">
 
         <a href="../pages/index.html" id="logo">
-            <img src="../images/Logo-removebg-preto-pcima.png" alt="logo melhem">
+            <img src="../images/Logo-removebg-preto-pcima.svg" alt="logo melhem">
             <h1>MELHEM</h1>
             <h2>IMÓVEIS</h2>
         </a>
@@ -44,16 +44,13 @@
             <a href="../pages/page_contato.html">CONTATO</a>
         </div>
 
-        <a href="">
-            <div class="btn_login">
-           <span>Login</span> 
-            </div>
-        </a>
+        <button class="btn_login">
+            <span>Login</span> 
+        </button>
         
-
     </div>
 
-    <main>
+    <div id="main_search">
         <div id="conteiner_search">
             <div class="box_search">
                 <h1>
@@ -66,18 +63,52 @@
 
                 <div id="linha"></div>
 
-                <form action="search_homes">
-                    
+                <form action="search_homes" id="form">
+                    <select name="" id="city">
+                        <option value="" hidden>Busque por cidade</option>
+                        <option value="">São Paulo</option>
+                        <option value="">Guarulhos</option>
+                        <option value="">Santos</option>
+                    </select>
+
+                    <select name="" id="bairro">
+                        <option value="" hidden>Busque por bairro</option>
+                        <option value="">Vila Maria</option>
+                        <option value="">Jardim Japão</option>
+                        <option value="">Vila Sabrina</option>
+                        <option value="">Vila Medeiros</option>
+                        <option value="">Jardim Japão</option>
+                    </select>
+                    <div id="aluguel-tamanho">
+                        <select name="" id="aluguel">
+                            <option value="" hidden>Aluguel até</option>
+                            <option value="">R$ 1.000,00</option>
+                            <option value="">R$ 2.000,00</option>
+                            <option value="">R$ 3.000,00</option>
+                            <option value="">R$ 4.000,00</option>
+                            <option value="">R$ 5.000,00</option>
+                        </select>
+
+                        <select name="" id="tamanho">
+                            <option value="" hidden>N° de quartos</option>
+                            <option value="">1+</option>
+                            <option value="">2+</option>
+                            <option value="">3+</option>
+                            <option value="">4+</option>
+                            <option value="">5+</option>
+                        </select>
+                    </div>
+                    <input value="Buscar Imóveis"   title="Buscar Imóveis" type="submit" id="btn-enviar">
                 </form>
             </div>
         </div>    
-    <main>
+    <div>
 
-    <div id="conteudo">
+    <main>
 
         
 
-    </div>
+    </main>
 
     <footer class="footer">
 
