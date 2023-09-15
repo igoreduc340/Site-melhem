@@ -21,13 +21,13 @@
     width: 32.4rem;
     height: 35.25rem;
     background: #ffffff;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza horizontalmente */
     position: relative;
     right: 250px;
     border-radius: 10px;
     box-shadow: 7px 7px 6px 3px #2828284b;
     z-index: 0;
-    padding: 30px 42px 30px 43px ;
+    padding: 30px 42px 30px 43px;
 }
 
 .box_search h1 {
