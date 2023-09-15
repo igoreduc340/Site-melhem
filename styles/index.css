@@ -121,3 +121,163 @@
     cursor: pointer;
 }
 /* estilando o conteudo da pagina inicial */
+
+main {
+    background-color: #fff;
+}
+
+/* Resumos */
+#resumos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 209px;
+    margin: 54px 0;
+}
+
+#resumos h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#resumos p {
+    color: #1d1d1d;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+    margin-top: 20px;
+}
+
+#resumos button {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    background-color: #333333;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Quem Somos Nós */
+#quem-somos h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 42px;
+}
+
+#quem-somos p {
+    width: 544px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    margin-top: 26px;
+}
+
+#quem-somos #imagens {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 54px;
+}
+
+.margin {
+    margin-top: 60px;
+}
+
+/* Experimente sua jornada de compra ou venda de casa conosco */
+#experimente h1 {
+    width: 800px;
+
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px; /* 105% */
+}
+
+#experimente .conteiner-img-r {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#experimente .conteiner-img-r p {
+    width: 437px;
+    align-self: center;
+}
+
+#experimente .conteiner-img-l {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0 54px 0;
+}
+
+#experimente .conteiner-img-l p {
+    width: 437px;
+    align-self: center;
+}
+
+/* Imóveis em Destaque */
+#conteiner-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin: 50px 0 54px 0;
+}
+
+.property {
+    max-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.property h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+
+.property .price {
+    font-size: 24px;
+    color: #3c3c3c
+}
+
+
+.property:hover {
+    transform: translateY(-5px);
+}
+
+.property img {
+    max-width: 100%;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff0000;
+}
