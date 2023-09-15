@@ -18,16 +18,16 @@
 }
 
 .box_search {
-    width: 604px;
-    height: 660px;
+    width: 604px; /* Largura fixa */
+    min-height: 660px; /* Altura mínima para garantir espaço para o conteúdo */
     background: #ffffff;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza horizontalmente */
     position: relative;
     right: 250px;
     border-radius: 10px;
     box-shadow: 7px 7px 6px 3px #2828284b;
     z-index: 0;
-    padding: 30px 42px 30px 43px ;
+    padding: 30px 42px 30px 43px;
 }
 
 .box_search h1 {
