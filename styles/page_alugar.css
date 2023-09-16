@@ -311,7 +311,7 @@ main {
 
 .btn {
     display: inline-block;
-    background-color: #000000;
+    background-color: #CB0505;
     color: #fff;
     padding: 5px 10px;
     text-decoration: none;
@@ -321,7 +321,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #ff0000;
+    background-color: #9A0C0C;
 }
 
 
@@ -358,8 +358,9 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     height: 50px;
+    cursor: pointer;
 }
 
 #btnBusca:hover {
-    background: #ff0000;
+    background: #CB0505;
 }
