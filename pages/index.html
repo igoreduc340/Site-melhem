@@ -21,13 +21,16 @@
     <!-- links para os CSS -->
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     
     <div id="header">
 
         <a href="../pages/index.html" id="logo">
-            <img src="../images/Logo-removebg-preto-pcima.svg" alt="logo melhem">
+            <img src="../images/Logo-removebg-vermelhopcima.png" alt="logo melhem">
             <h1>MELHEM</h1>
             <h2>IMÓVEIS</h2>
         </a>
@@ -107,17 +110,17 @@
     <main>
 
         <div id="resumos">
-            <div id="resumo1">
+            <div id="resumo1" class="card-resumo">
                 <h3>Saia do Aluguel</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis</p>
                 <button>Ver Casas</button>
             </div>
-            <div id="resumo2">
+            <div id="resumo2" class="card-resumo">
                 <h3>Aqui Você Acha</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis</p>
                 <button>Ver Casas</button>
             </div>
-            <div id="resumo3">
+            <div id="resumo3" class="card-resumo">
                 <h3>Seja Nosso Parceiro</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis?</p>
                 <button>conecte Agora</button>
@@ -147,7 +150,7 @@
             </div>
         </div>
 
-        <div id="imovies-destaque">
+        <div id="imoveis-destaque">
             <h1>Imóveis em Destaque</h1>     
             <div id="conteiner-destaques">
                 <div class="property">
@@ -224,11 +227,12 @@
             </div>
             </div>
             <div id="navegacao">
-                <img src="../images/Seta.svg" alt="">
+                <button><img src="../images/Seta.svg" alt=""></button>
                 <span>1</span>
                 <span>2</span>
                 <span>3</span>
                 <span>4</span>
+                <button><img src="../images/Seta-d.svg" alt=""></button>
             </div>
         </div>
         
@@ -269,5 +273,7 @@
           </div>
 
     </footer>
+
+    <script src="../scripts/scroll-reveal.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
 
 #conteiner_search {
     padding: 30px;
-    background: #f5f5f5 url(../images/mulher-background-cortada.png) no-repeat right ;
+    background: #f5f5f5 url(../images/mulher-background-sbg.png) no-repeat right ;
     background-color: #f5f5f5;
 }
 
@@ -31,12 +31,11 @@
 }
 
 .box_search h1 {
-    color: #818080;
+    color: #000000;
     font-size: 40px;
-    font-style: normal;
     font-weight: 600;
     line-height: 45.5px;
-    letter-spacing: 5.5px;
+    letter-spacing: 5px;
 }
 
 .box_search .text_meio {
@@ -44,7 +43,7 @@
 }
 
 .box_search .text_voce {
-    color: #363636;
+    color: #000000;
     letter-spacing: 2.2px;
 }
 
@@ -99,7 +98,8 @@
 }
 
 #form  select:focus {
-    outline: 0.5px solid #818181;
+    outline: 1px solid #212E61;
+    border: none;
 }
 
 #form #aluguel-tamanho, select {
@@ -111,17 +111,19 @@
 
 #btn-enviar{
     height: 60px;
-    background-color: #6b6a6a;
+    background-color: #B02121;
     color: #FFF;
     font-size: 16px;
     font-weight: 600;
     line-height: 26.5px; /* 147.222% */
     letter-spacing: 4.95px;
+
+    transition: background-color 0.2s ease;
     cursor: pointer;
 }
-#btn-enviar:hover{
-    background-color: #ff0000;
-    color: #fff;
+
+#btn-enviar:hover {
+    background-color: #A00C0C;
 }
 /* estilando o conteudo da pagina inicial */
 
@@ -131,23 +133,42 @@ main {
 
 /* Resumos */
 #resumos {
+    height: 100vh;
+
     display: flex;
     flex-direction: row;
     text-align: center;
-    gap: 209px;
-    margin: 54px 0;
+    align-items: center;
+    gap: 150px;
+    padding: 50px;
+
+    background-color: #c0cdff;
+}
+
+.card-resumo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 23px;
+    border-radius: 2px;
+    height: 300px;
+}
+
+.card-resumo:hover {
+    box-shadow: 5px 3px 10px #00000033;
 }
 
 #resumos h3 {
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 #resumos p {
-    color: #1d1d1d;
-    font-size: 17px;
-    font-weight: 500;
+    color: #1b1b1b;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 24px; /* 133.333% */
     margin-top: 20px;
 }
@@ -157,20 +178,25 @@ main {
     font-weight: 500;
     line-height: 22px;
     color: #fff;
-    background-color: #333333;
+    background-color: #1f1e1e;
+    border-radius: 2px;
     padding: 10px 15px;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #resumos button:hover {
-    background-color: #ff0000;
+    background-color: #9A1B1B;
     color:white;
 }
 
 
 
 /* Quem Somos Nós */
+#quem-somos {
+    margin-top: 50px;
+}
+
 #quem-somos h1 {
     font-size: 40px;
     font-weight: 600;
@@ -199,8 +225,12 @@ main {
 }
 
 /* Experimente sua jornada de compra ou venda de casa conosco */
+#experimente {
+    margin-top: 200px;
+}
+
 #experimente h1 {
-    width: 800px;
+    width: 700px;
 
     font-size: 40px;
     font-style: normal;
@@ -231,6 +261,10 @@ main {
 }
 
 /* Imóveis em Destaque */
+#imoveis-destaque {
+    margin-top: 200px;
+}
+
 #conteiner-destaques {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -279,7 +313,7 @@ main {
 
 .btn {
     display: inline-block;
-    background-color: #000000;
+    background-color: #CB0505;
     color: #fff;
     padding: 5px 10px;
     text-decoration: none;
@@ -289,5 +323,32 @@ main {
 }
 
 .btn:hover {
-    background-color: #ff0000;
+    background-color: #a00c0c;
+}
+
+/* navegação destaques */
+#navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+
+}
+
+#navegacao button {
+    background-color: #333;
+    cursor: pointer;
+}
+
+#navegacao img {
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+}
+
+/* escondendo o conteudo para fazer o scroll reveal */
+
+#resumo1, #resumo2, #resumo3, #quem-somos, #experimente {
+    visibility: hidden;
 }
