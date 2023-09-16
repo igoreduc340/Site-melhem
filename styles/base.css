@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     border: none;
     margin: 0;
@@ -21,7 +21,7 @@ main {
 
     width: 100%;
     height: 27vh;
-    max-height: 120px;
+    max-height: 90px;
     min-height: 100px;
 
     background-color: #ffffff;
@@ -31,23 +31,25 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: -10px;
 }
 
 #logo {
     width: 15.6875rem;
-    height: 3.56194rem; 
-    margin-left: 8.44rem;
+    height: 1.56194rem; 
+    margin-left: 7.44rem;
 }
 
 #logo img {
     width: 7.22056rem;
     position: absolute;
     float: left;
+    
 }
 
 #logo h1, h2 {
     position: relative;
-    left: 10px;
+    left: 13px;
     float: right;
 }
 
@@ -69,21 +71,26 @@ main {
 }
 
 .navegação {
-    margin-left: 24.44rem;
+    padding-top: 20px;
+    margin-left: 36rem;
 }
 
 .navegação a {
-    color: #4e4e4e;
-    font-size: 0.821rem;
-    font-weight: 300;
+    color: #5d5d5d;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.20869rem; /* 147.222% */
     text-decoration-line: none;
     padding: 0 0.51rem;
+    
+
 }
 
 .navegação a:hover {
-    background-color: #fbfbfb;
+    background-color: #8d8d8d;
+    color: white;
     border-radius: 2px;
+    
 }
 
 .btn_login {
@@ -93,7 +100,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 4rem;
+    margin-left: 2rem;
+    margin-right: 6rem;
+    margin-top: 1rem;
 
     cursor: pointer;
 }

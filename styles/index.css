@@ -117,8 +117,11 @@
     font-weight: 600;
     line-height: 26.5px; /* 147.222% */
     letter-spacing: 4.95px;
-
     cursor: pointer;
+}
+#btn-enviar:hover{
+    background-color: #ff0000;
+    color: #fff;
 }
 /* estilando o conteudo da pagina inicial */
 
@@ -159,6 +162,13 @@ main {
     margin-top: 20px;
     cursor: pointer;
 }
+
+#resumos button:hover {
+    background-color: #ff0000;
+    color:white;
+}
+
+
 
 /* Quem Somos Nós */
 #quem-somos h1 {
