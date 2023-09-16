@@ -17,6 +17,7 @@ main {
  
 /* Estilando o Header */
 #header {
+    position: fixed;
 
     width: 100%;
     max-height: 120px;
@@ -28,6 +29,8 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    z-index: 999;
 }
 
 #logo {
@@ -91,22 +94,21 @@ main {
     align-items: center;
     justify-content: center;
     margin-left: 4rem;
+    letter-spacing: -1px;
 
     cursor: pointer;
 }
 
 .btn_login:hover {
-    border: 1px solid #9A1B1B;
+    border: 1.5px solid #9A1B1B;
 }
 
 .btn_login span {
     color: #000;
-    font-size: 1rem;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 200;
     line-height: 1.5rem; /* 133.333% */
-    padding: 0.7rem 1.7rem;
-
+    padding: 0.6rem 1.2rem;
 }
 
  /* Estilos para o menu dropdown */

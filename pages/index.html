@@ -24,6 +24,7 @@
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+ 
 </head>
 <body>
     
@@ -48,21 +49,21 @@
         </div>
 
         <button class="btn_login">
-            <span>Login</span> 
+            <span>Login/Registre</span> 
         </button>
         
     </div>
 
-    <div id="main_search">
-        <div id="conteiner_search">
-            <div class="box_search">
+    <div id="main-search">
+        <div id="conteiner-search">
+            <div id="box-search">
                 <h1>
                     ENCONTRE O IMÓVEL<br>
                     CERTO PARA <span class="text_voce">VOCÊ</span><br>
                 </h1>
 
-                <a href="" id="btn_alugar">Alugar</a>
-                <a href="" id="btn_comprar">Comprar</a>
+                <button onclick="selecionaralugar()"><span id="btn-alugar" class="btn-selected">Alugar</span></button>
+                <button onclick="selecionarcomprar()"><span id="btn-comprar" >Comprar</span></button>
 
                 <div id="linha"></div>
 
@@ -82,7 +83,8 @@
                         <option value="">Vila Medeiros</option>
                         <option value="">Jardim Japão</option>
                     </select>
-                    <div id="aluguel-tamanho">
+                    <div id="aluguel-quartos">
+                        
                         <select name="" id="aluguel">
                             <option value="" hidden>Aluguel até</option>
                             <option value="">R$ 1.000,00</option>
@@ -92,7 +94,7 @@
                             <option value="">R$ 5.000,00</option>
                         </select>
 
-                        <select name="" id="tamanho">
+                        <select name="" id="quartos">
                             <option value="" hidden>N° de quartos</option>
                             <option value="">1+</option>
                             <option value="">2+</option>
@@ -113,28 +115,29 @@
             <div id="resumo1" class="card-resumo">
                 <h3>Saia do Aluguel</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis</p>
-                <button>Ver Casas</button>
+                <a href="page_comprar.html"><button>Ver Casas</button></a>
             </div>
             <div id="resumo2" class="card-resumo">
                 <h3>Aqui Você Acha</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis</p>
-                <button>Ver Casas</button>
+                <a href="page_alugar.html"><button>Ver Casas</button></a>
             </div>
             <div id="resumo3" class="card-resumo">
                 <h3>Seja Nosso Parceiro</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis?</p>
-                <button>conecte Agora</button>
+                <p>Lorem ipsum do sit amet consectetur adipisicing elit. Ipsa sunt beatae quam nobis fugiat. Optio, eos sapiente. Unde, odit quasi, quod consequatur perspiciatis?</p>
+                <a href="page_contato.html"><button>Contacte Agora</button></a>
             </div>
         </div>
 
         <div id="quem-somos">
             <h1>Quem Somos Nós</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam provident delectus esse fugit facilis saepe impedit iure a, ea velit voluptas? Vitae, ullam hic. Vel, sapiente excepturi. Alias, laudantium optio.</p>
+            <a href="page_sobre.html">Saiba mais...</a>
             <div id="imagens">
-                <img src="../images/Rectangle 5.png" alt="">
-                <img class="margin" src="../images/Rectangle 5.png" alt="">
-                <img src="../images/Rectangle 5.png" alt="">
-                <img class="margin" src="../images/Rectangle 5.png" alt="">
+                <img src="../images/fotos/photo1.png" alt="">
+                <img class="margin" src="../images/fotos/photo2.png" alt="">
+                <img src="../images/fotos/photo3.png" alt="">
+                <img class="margin" src="../images/fotos/photo4.png" alt="">
             </div>
         </div>
 
@@ -142,10 +145,10 @@
             <h1>Experimente sua jornada de compra ou venda conosco</h1>
             <div class="conteiner-img-r">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque velit delectus tempora aliquam ad dolor similique et vero esse! Consectetur ab fugiat id accusamus, corrupti quae atque nihil et veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere recusandae tempore nisi fugiat tenetur unde excepturi iusto optio, distinctio ullam non explicabo. Repellat modi natus rem culpa cumque omnis fugit!</p>
-                <img src="../images/Rectangle 3.png" alt="">
+                <img src="../images/image-house1-page-home.png" alt="">
             </div>
             <div class="conteiner-img-l">
-                <img src="../images/Rectangle 3.png" alt="">
+                <img src="../images/image-house3-page-home.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque velit delectus tempora aliquam ad dolor similique et vero esse! Consectetur ab fugiat id accusamus, corrupti quae atque nihil et veritatis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas officia reiciendis hic omnis accusamus error dignissimos dolores ullam ratione fugit nam doloremque laboriosam, quod, delectus recusandae consequuntur quos, nulla maxime?</p>
             </div>
         </div>
@@ -153,78 +156,307 @@
         <div id="imoveis-destaque">
             <h1>Imóveis em Destaque</h1>     
             <div id="conteiner-destaques">
+
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="property">
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="property">
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim. lo</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim.</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim. lo</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
 
                 <div class="property">
-                    <img src="../images/Casa1.jpg" alt="Casa à Venda">
-                    <h2>Casa Espaçosa</h2>
-                    <p>Ampla casa com 4 quartos e jardim. lo</p>
-                    <span class="price">R$300.000</span>
-                    <a href="#" class="btn">Detalhes</a>
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
                 </div>
-            </div>
+
+                <div class="property">
+                    <a href="">
+                        <img src="../images/Casa1.jpg" alt="Casa à Venda">
+
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel">Apartamento</span>
+                                <span class="type-negocio">Aluga</span>
+                            </div>
+
+                            <h3 class="bairro">Vila Sabrina</h3>
+                            <span class="cidade">São Paulo, zona norte</span>
+
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i>50 m²</span>
+                                <span> <i class="ph ph-bed"></i>2 quartos</span>
+                            </div>
+
+                            <span  class="aluguel-de">Aluguel:</span>
+                            <span class="price">R$3.000 </span>
+                            
+                        </div>
+                    </a>
+                </div>
+
             </div>
             <div id="navegacao">
                 <button><img src="../images/Seta.svg" alt=""></button>
@@ -254,6 +486,7 @@
 
           <div id="localizacao">
             <h3>localização</h3>
+            <span>Rua Togo, 713</span>
             <span>São Paulo - Zona Norte</span>
           </div>
 
@@ -274,6 +507,8 @@
 
     </footer>
 
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="../scripts/scroll-reveal.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

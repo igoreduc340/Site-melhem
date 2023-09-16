@@ -30,3 +30,8 @@ sr.reveal('#experimente',{
     duration: 2000,
     rotate: {x: 80,  y:0, z:0}
 });
+
+sr.reveal('#imoveis-destaque',{
+    duration: 2000,
+    rotate: {x: 80,  y:0, z:0}
+});
