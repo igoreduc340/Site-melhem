@@ -86,7 +86,7 @@ main {
 }
 
 .navegação a:hover {
-    background-color: #8d8d8d;
+    background-color: #A00C0C;
     color: white;
     border-radius: 2px;
     
@@ -311,7 +311,7 @@ main {
 
 .btn {
     display: inline-block;
-    background-color: #CB0505;
+    background-color: #A00C0C;
     color: #fff;
     padding: 5px 10px;
     text-decoration: none;
@@ -321,7 +321,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #9A0C0C;
+    background-color: rgb(211, 60, 60);
 }
 
 
@@ -363,4 +363,15 @@ main {
 
 #btnBusca:hover {
     background: #CB0505;
+}
+/* Estilos para o botão */
+.botao {
+    background-color: white;
+    color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    transition: background-color 0.3s ease; /* Adiciona uma transição de cor suave */
 }
