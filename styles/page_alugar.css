@@ -262,67 +262,6 @@ main {
     font-weight: 700;
     margin-bottom: 15px;
 }
-.property-listing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
-    margin: 40px 40px;
-    height: 500px;
-    color:#3b3b3b
-}
-
-
-.property {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.property h2 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-
-}
-
-.property .price {
-    font-size: 24px;
-    color: #3c3c3c
-}
-
-
-.property:hover {
-    transform: translateY(-5px);
-}
-
-.property img {
-    max-width: 100%;
-}
-
-.price {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #A00C0C;
-    color: #fff;
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: rgb(211, 60, 60);
-}
 
 
 #busca {
@@ -365,7 +304,7 @@ main {
     background: #CB0505;
 }
 /* Estilos para o botão */
-.botao {
+.botao ,.botao1,.botao-ver-mais {
     background-color: white;
     color: #000000;
     border: 1px solid rgb(0, 0, 0);
@@ -374,4 +313,117 @@ main {
     border-radius: 5px; /* Adiciona bordas arredondadas */
     font-size: 16px; /* Define o tamanho da fonte */
     transition: background-color 0.3s ease; /* Adiciona uma transição de cor suave */
+}
+#Bloco_de_filtros {
+    margin-left: 15px;
+    margin-top: 30px;
+    
+}
+
+.paragrafos {
+    margin-bottom: 10px;
+}
+
+/* Estilos para os botões */
+.botoes {
+    /* Os botões ficarão juntos na mesma linha */
+    margin-top: 20px; /* Espaçamento vertical entre os parágrafos e os botões */
+}
+
+/* Estilos para os botões */
+.botao {
+    margin-right: 5px; /* Espaçamento horizontal entre os botões */
+    /* Outros estilos para os botões aqui */
+}
+.botao1{
+    margin-left: 450px; /* Espaçamento horizontal entre os botões */
+    /* Outros estilos para os botões aqui */
+}
+.botao-ver-mais{
+    margin-left: 320px; /* Espaçamento horizontal entre os botões */
+    width: 250px;
+    margin-bottom: 30px;
+    /* Outros estilos para os botões aqui */
+}
+
+
+#conteiner-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px 2px;
+    margin: 50px 0 54px 0;
+    width: 900px;
+    margin-left: 15px;
+}
+.property {
+    width: 260px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #d3d3d3;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.property:hover {
+    box-shadow: 3px 3px 10px #00000049;
+    transform: scale(1.03);
+    transition: 200ms ease-in;
+}
+
+.property a {
+    text-decoration: none;
+    color: #000;
+}
+
+.property img {
+    max-width: 100%;
+}
+
+.property .descricao {
+    padding: 15px;
+}
+
+.property .line-1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.property .type-negocio {
+    font-weight: 500;
+}
+
+.property h3 {
+    margin-top: 13px;
+    font-size: 18px;
+}
+
+.property .cidade {
+    font-size: 12PX;
+    font-weight: 300;
+}
+
+.property .caracteristicas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    margin: 13px 0;
+    font-size: 14px;
+    color: #707070ee;
+}
+
+.property .aluguel-de {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.property .price {
+    color: #0f9625;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }

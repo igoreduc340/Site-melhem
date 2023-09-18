@@ -35,12 +35,8 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-<<<<<<< HEAD
+    z-index: 1;
     margin-top: -10px;
-=======
-
-    z-index: 100;
->>>>>>> 42855b3ab11db88fc817d15f48e3de7f5a1dee08
 }
 
 #logo {
@@ -109,15 +105,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     margin-left: 2rem;
     margin-right: 6rem;
     margin-top: 1rem;
-=======
-    margin-left: 4rem;
-    text-decoration: none;
-    margin-bottom: 10px;
->>>>>>> 42855b3ab11db88fc817d15f48e3de7f5a1dee08
 
     cursor: pointer;
 }
