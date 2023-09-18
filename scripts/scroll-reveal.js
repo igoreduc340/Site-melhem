@@ -30,3 +30,22 @@ sr.reveal('#experimente',{
     duration: 2000,
     rotate: {x: 80,  y:0, z:0}
 });
+
+sr.reveal('#imoveis-destaque',{
+    duration: 2000,
+    rotate: {x: 80,  y:0, z:0}
+});
+
+sr.reveal('#box-login',{
+    duration: 1500,
+    rotate: {x: 100,  y:0, z:0}
+});
+
+sr.reveal('#cabecalho',{
+    duration: 1000,
+});
+
+sr.reveal('#conteiner-form',{
+    duration: 1500,
+    rotate: {x:100, y:0, z:0}
+})
