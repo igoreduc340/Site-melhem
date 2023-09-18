@@ -14,6 +14,11 @@ main {
     width: 85%;
     margin: 0 auto;
 }
+
+.linha {
+    width: 100%;
+    border-bottom: 1px solid #0000002c;
+}
  
 /* Estilando o Header */
 #header {
@@ -30,7 +35,7 @@ main {
     flex-direction: row;
     align-items: center;
 
-    z-index: 999;
+    z-index: 100;
 }
 
 #logo {
@@ -94,13 +99,15 @@ main {
     align-items: center;
     justify-content: center;
     margin-left: 4rem;
-    letter-spacing: -1px;
+    text-decoration: none;
+    margin-bottom: 10px;
 
     cursor: pointer;
 }
 
 .btn_login:hover {
     border: 1.5px solid #9A1B1B;
+    background-color: #fdfdfd;
 }
 
 .btn_login span {
@@ -152,6 +159,63 @@ main {
     list-style: none; /* Remove o marcador de lista */
     padding: 0; /* Remove o preenchimento padrão da lista */
     margin: 0; /* Remove a margem padrão da lista */
+}
+
+#menu-dropdown-login {
+    position: relative;
+    display: inline-block;
+}
+
+#menu-dropdown-login #submenu-login {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 6px 6px 15px #000000a2;
+}
+
+#menu-dropdown-login:hover #submenu-login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 30PX;
+    gap: 10px;
+
+}
+
+#menu-dropdown-login #submenu-login ul {
+    background-color: #fff;
+}
+
+#menu-dropdown-login #submenu-login li {
+    display: inline;
+    list-style: none;
+    width: 140px;
+    height: 30px;
+
+    padding: 5px 10px;
+    background-color: #B02121;
+    border-radius: 10px;
+}
+
+#menu-dropdown-login #submenu-login li:hover {
+    background-color: #9A1B1B;
+}
+
+#menu-dropdown-login #submenu-login a {
+    text-decoration: none;
+    padding: 0px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#menu-dropdown-login #submenu-login span {
+    font-weight: 400;
+    color: #666666;
 }
 
 /* Estilando o Footer das paginas */

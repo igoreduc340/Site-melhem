@@ -70,10 +70,6 @@
 
 }
 
-#linha {
-    width: 100%;
-    border-bottom: 1px solid #0000002c;
-}
 
 /* estilizando o formulario da pesquisa */
 #form {
@@ -219,7 +215,7 @@ main {
     text-decoration: underline;
 }
 
-#quem-somos #imagens {
+#quem-somos #images {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -295,7 +291,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    border: 0.5px solid #b3b3b3;
+    border: 0.5px solid #d3d3d3;
     background-color: #fff;
 
     cursor: pointer;

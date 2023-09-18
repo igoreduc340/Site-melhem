@@ -48,9 +48,18 @@
             <a href="../pages/page_contato.html">CONTATO</a>
         </div>
 
-        <button class="btn_login">
-            <span>Login/Registre</span> 
-        </button>
+        <divx id="menu-dropdown-login">
+            <a href="login.html"  class="btn_login">
+                <span>Login</span> 
+            </a>
+            <ul id="submenu-login">
+                <li id="btn-entrar"><a href="login.html">Entre</a></li>
+                <span>Ou</span>
+                <li id="btn-cadastre"><a href="register.html">Cadastre-se</a></li>
+            </ul>
+         
+        </div>
+
         
     </div>
 
@@ -65,7 +74,7 @@
                 <button onclick="selecionaralugar()"><span id="btn-alugar" class="btn-selected">Alugar</span></button>
                 <button onclick="selecionarcomprar()"><span id="btn-comprar" >Comprar</span></button>
 
-                <div id="linha"></div>
+                <div class="linha"></div>
 
                 <form action="search_homes" id="form">
                     <select name="" id="city">
@@ -133,7 +142,7 @@
             <h1>Quem Somos Nós</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam provident delectus esse fugit facilis saepe impedit iure a, ea velit voluptas? Vitae, ullam hic. Vel, sapiente excepturi. Alias, laudantium optio.</p>
             <a href="page_sobre.html">Saiba mais...</a>
-            <div id="imagens">
+            <div id="images">
                 <img src="../images/fotos/photo1.png" alt="">
                 <img class="margin" src="../images/fotos/photo2.png" alt="">
                 <img src="../images/fotos/photo3.png" alt="">

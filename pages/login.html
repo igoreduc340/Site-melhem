@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Melhem</title>
+    
+        <!-- icones -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+        <link rel="manifest" href="../icons/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#ffc40d">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- import das fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- links para os CSS -->
+        <link rel="stylesheet" href="../styles/login.css">
+    
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+     
+    </head>
+<body>
+
+    <header>
+        
+        <a href="index.html">
+            <i class="ph ph-arrow-circle-left"></i>
+            <span>Voltar</span>
+        </a>
+        <div id="logo">
+            <img src="../images/Logo-removebg-vermelhopcima.png" alt="logo melhem">
+            <h1>MELHEM</h1>
+            <h2>IMÓVEIS</h2>
+        <div>
+    </header>
+    
+    <div id="conteiner-form-login">
+        <div id="box-login">
+            <h1>Entre na sua conta</h1>
+            <div class="linha"></div>
+            <form action="login">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="*************">
+                <a href="">Esqueceu a senha?</a>
+                <input type="submit" id="btn-login" value="Entrar">
+            </form>
+            <span >Ainda não tem conta? <a href="register.html" id="cadastre">Cadastre-se</a></span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="../scripts/scroll-reveal.js"></script>
+
+</body>
+</html>
