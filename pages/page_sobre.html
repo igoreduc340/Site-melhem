@@ -27,9 +27,7 @@
     <div id="header">
 
         <a href="../pages/index.html" id="logo">
-            <img src="../images/Logo-removebg-preto-pcima.png" alt="logo melhem">
-            <h1>MELHEM</h1>
-            <h2>IMÓVEIS</h2>
+            <img src="../images/Logo-completo.png" alt="logo melhem">
         </a>
 
         <div class="navegação">
@@ -44,10 +42,16 @@
             <a href="../pages/page_contato.html">CONTATO</a>
         </div>
 
-        <button class="btn_login">
-            <span>Login</span> 
-        </button>
-
+        <divx id="menu-dropdown-login">
+            <a href="login.html"  class="btn_login">
+                <span><i class="ph ph-user-circle"></i>Login</span> 
+            </a>
+            <ul id="submenu-login">
+                <li id="btn-entrar"><a href="login.html">Entre</a></li>
+                <span>Ou</span>
+                <li id="btn-cadastre"><a href="register.html">Cadastre-se</a></li>
+            </ul>
+         
     </div>
 
     <main>
@@ -89,6 +93,8 @@
         </div>
 
     </footer>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 </body>
 </html>    
