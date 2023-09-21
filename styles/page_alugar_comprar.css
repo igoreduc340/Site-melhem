@@ -1,121 +1,101 @@
-* {
+*{
     padding: 0;
     border: none;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    text-decoration: none;
 }
 body {
+    font-family: 16px;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #000;
 }
 
 main {
     width: 85%;
     margin: 0 auto;
 }
+
+.linha {
+    width: 100%;
+    border-bottom: 1px solid #0000002c;
+}
  
 /* Estilando o Header */
 #header {
-    position: fixed; /* Define a posição fixa para o cabeçalho */
-    top: 0; /* Alinha o cabeçalho no topo da janela de visualização */
-    
+    position: sticky;
+    top: 0;
 
     width: 100%;
-    height: 27vh;
-    max-height: 90px;
-    min-height: 100px;
 
     background-color: #ffffff;
     border-bottom: 1px solid rgb(173, 173, 173);
-    z-index: 1;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: -10px;
-}
+    justify-content: space-around;
 
-#logo {
-    width: 15.6875rem;
-    height: 1.56194rem; 
-    margin-left: 4.44rem;
+    padding: 10px 0px;
+
+    z-index: 1;
 }
 
 #logo img {
-    width: 7.22056rem;
-    position: absolute;
-    float: left;
-    
-}
-
-#logo h1, h2 {
-    position: relative;
-    left: 13px;
-    float: right;
-}
-
-#logo h1 {
-    color: #3A3A3A;
-    font-size: 1.70156rem;
-    font-weight: 700;
-    line-height: 1.31869rem; /* 77.5% */
-    letter-spacing: 0.27225rem;
-}
-
-#logo h2 {
-    margin-top: 12px;
-    color: #7D7979;
-    font-size: 1.70156rem;
-    font-weight: 300;
-    line-height: 1.02094rem; /* 60% */
-    letter-spacing: 0.32331rem;
-}
-
-.navegação {
-    padding-top: 20px;
+    width: 180px;
+    margin-left: 40px;
 }
 
 .navegação a {
     color: #5d5d5d;
-    font-size: 14px;
+
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.20869rem; /* 147.222% */
     text-decoration-line: none;
-    padding: 0 0.51rem;
-    
 
+    padding: 3px 5px;
+    transition: all 200ms ;
 }
 
 .navegação a:hover {
     background-color: #A00C0C;
-    color: white;
-    border-radius: 2px;
+    color: #fff;
+    border-radius: 3px;
     
 }
 
 .btn_login {
+    background: #FFF;
+    color: #000;
+
     border-radius: 2px;
     border: 0.5px solid #00000093;
-    background: #FFF;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2rem;
-    margin-right: 6rem;
-    margin-top: 1rem;
+
+    font-size: 14px;
+    margin-right: 30px;
+    margin-left: 180px;
+
+    padding: 10px 15px;
 
     cursor: pointer;
 }
 
-.btn_login span {
-    color: #000;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 1.5rem; /* 133.333% */
-    padding: 0.7rem 1.7rem;
+.btn_login:hover {
+    border: 1.5px solid #9A1B1B;
+    background-color: #fdfdfd;
+}
 
+.btn_login i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
 }
 
  /* Estilos para o menu dropdown */
@@ -143,12 +123,12 @@ main {
 
 .menu-dropdown .submenu li a {
     text-decoration: none;
-    color: #000;
     display: block;
 }
 
 .menu-dropdown .submenu li:hover {
-    background-color: #f0f0f0;
+    background-color: #A00C0C;
+    
 }
 .menu-dropdown .submenu {
     display: none;
@@ -161,111 +141,110 @@ main {
     margin: 0; /* Remove a margem padrão da lista */
 }
 
-/* Estilando o Footer das paginas */
+#menu-dropdown-login {
+    position: relative;
+    display: inline-block;
+}
 
-.footer {
-    background: #333;
+#menu-dropdown-login #submenu-login {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 6px 6px 15px #000000a2;
+}
+
+#menu-dropdown-login:hover #submenu-login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 30PX;
+    gap: 10px;
+
+}
+
+#menu-dropdown-login #submenu-login ul {
+    background-color: #fff;
+}
+
+#menu-dropdown-login #submenu-login li {
+    display: inline;
+    list-style: none;
+    width: 140px;
+    height: 30px;
+
+    padding: 5px 10px;
+    background-color: #B02121;
+    border-radius: 10px;
+}
+
+#menu-dropdown-login #submenu-login li:hover {
+    background-color: #9A1B1B;
+}
+
+#menu-dropdown-login #submenu-login a {
+    text-decoration: none;
+    padding: 0px 0;
+    font-size: 14px;
+    font-weight: 500;
     color: #fff;
-    height: 50vh;
+}
+
+#menu-dropdown-login #submenu-login span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3d3d3d;
+}
+/* Footer */
+/* Estilização do footer */
+.footer {
+    background-color: #333;
+    color: white;
+    width: 52%;
+    padding: 20px;
+    margin-right: auto; /* Alinha à esquerda da tela */
     display: flex;
-    flex-direction: row;
-    padding: 70px;
-    gap: 90px;
-    
-    
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Distribui os elementos à esquerda */
+    align-items: flex-start; /* Alinha os elementos no topo */
 }
 
-/* Logo do rodapé */
-.footer #logo_footer {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
 }
 
-.footer #logo_footer img {
-    width: 119px;
-    height: 119px;
+#logo_footer img {
+    width: 100px;
+    height: auto;
 }
 
-.footer span {
-    font-weight: 200;
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* sobre a Melhem */
-.footer #sobre_melhem {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #sobre_melhem h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer #sobre_melhem span {
-    color: rgba(255, 255, 255, 0.70);
+h4 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Localização */
-.footer #localizacao {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.contact-item {
+    margin-top: 5px;
 }
 
-.footer #localizacao h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
+#segue_gente img {
+    width: 32px;
+    height: 32px;
 }
 
-.footer #localizacao span {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    font-weight: 400;
-}
 
-/* Contattos */
-.footer #contatos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #contatos h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer #contatos h4 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.footer #contatos span {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* Segue a gente */
-.footer #segue_gente {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #segue_gente h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
 
 
 #busca {
@@ -320,7 +299,7 @@ main {
 }
 #Bloco_de_filtros {
     margin-left: 15px;
-    margin-top: 100px;
+    margin-top: 20px;
     
 }
 
