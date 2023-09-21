@@ -21,6 +21,9 @@
         <!-- links para os CSS -->
         <link rel="stylesheet" href="../styles/base.css">
         <link rel="stylesheet" href="../styles/page_contato.css">
+
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
 <body>
     
@@ -55,7 +58,23 @@
     </div>
 
     <main>
-        <h1>Contato</h1>
+        <div id="conteiner-contato">
+            <h1>Contato</h1>
+            <p>Insira sua informações, e entraremos em contato com você!</p>
+            <form action="contato">
+                <label for="primeiro-nome">Primeiro Nome</label>
+                <input type="text" id="primeiro-nome" placeholder="Digite seu nome">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="email@exemplo.com">
+                <label for="phone">Celular</label>
+                <input type="number" id="phone" placeholder="(__)_ ____-____">
+                <label for="comments">Comentários</label>
+                <textarea name="comments" id="comments" cols="30" rows="10" maxlength="300"></textarea>
+                <input type="submit" value="Enviar" id="btn-contato">
+            </form>
+        </div>
     </main>
 
     <footer class="footer">
@@ -92,8 +111,10 @@
           <img src="../images/icones-redes-sociais.png" alt="">
         </div>
 
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
     </footer>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="../scripts/scroll-reveal.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>    

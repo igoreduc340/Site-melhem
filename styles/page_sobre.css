@@ -1,17 +1,50 @@
+body {
+    background-color: #f8f8f8;
+}
+
 #sobre-nos {
     margin-top: 100px;
+}
+
+.box-sobre {
+    height: 75vmin;
 }
 
 #sobre-nos h1 {
     font-size: 48px;
     font-weight: 700;
+
+}
+
+#sobre-nos h3 {
+    font-size: 32px;
 }
 
 #sobre-nos p {
     width: 90%;
-    margin-top: 34px;
+
+    margin-top: 20px;
     font-size: 20px;
     line-height: 31.556px;
+    text-align: justify;
+}
+
+#img-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-sobre img {
+    width: 45%;
+    border-radius: 20px;
+    border: 3px solid #a3a3a3;
+}
+
+#img-sobre span {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px;
 }
 
 #localizacao-sobre {
@@ -22,13 +55,13 @@
 }
 
 #localizacao-sobre h2 {
-    font-size: 38px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 42px; /* 105% */
 }
 
 #localizacao-sobre #mapa {
-    margin-top: 15px;
+    margin-top: 20px;
     width: 70%;
     margin-bottom: 30px;
 }

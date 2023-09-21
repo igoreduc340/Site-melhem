@@ -5,6 +5,13 @@
     font-family: 'Inter', sans-serif;
     text-decoration: none;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
     font-family: 16px;
     font-family: Arial, sans-serif;
@@ -60,7 +67,7 @@ main {
 }
 
 .navegação a:hover {
-    background-color: #A00C0C;
+    background-color: #212E61;
     color: #fff;
     border-radius: 3px;
     
@@ -85,7 +92,7 @@ main {
 }
 
 .btn_login:hover {
-    border: 1.5px solid #9A1B1B;
+    border: 1.5px solid #212E61;
     background-color: #fdfdfd;
 }
 
@@ -124,7 +131,7 @@ main {
 }
 
 .menu-dropdown .submenu li:hover {
-    background-color: #A00C0C;
+    background-color: #212E61;
     
 }
 .menu-dropdown .submenu {
