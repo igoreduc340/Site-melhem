@@ -49,3 +49,13 @@ sr.reveal('#conteiner-form',{
     duration: 1500,
     rotate: {x:100, y:0, z:0}
 })
+
+sr.reveal('#sobre-nos',{
+    duration: 2000,
+    rotate: {x: 10,  y:10, z:0}
+});
+
+sr.reveal('#localizacao-sobre',{
+    duration: 1500,
+    rotate: {x: 0,  y:50, z:0}
+});

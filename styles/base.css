@@ -3,11 +3,14 @@
     border: none;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    text-decoration: none;
 }
 body {
+    font-family: 16px;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #000;
 }
 
 main {
@@ -22,12 +25,10 @@ main {
  
 /* Estilando o Header */
 #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
 
     width: 100%;
-    height: 27vh;
-    max-height: 90px;
-    min-height: 100px;
 
     background-color: #ffffff;
     border-bottom: 1px solid rgb(173, 173, 173);
@@ -35,79 +36,50 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 1;
-    margin-top: -10px;
-}
+    justify-content: space-around;
 
-#logo {
-    width: 15.6875rem;
-    height: 1.56194rem; 
-    margin-left: 7.44rem;
+    padding: 20px 0px;
+
+    z-index: 1;
 }
 
 #logo img {
-    width: 7.22056rem;
-    position: absolute;
-    float: left;
-    
-}
-
-#logo h1, h2 {
-    position: relative;
-    left: 13px;
-    float: right;
-}
-
-#logo h1 {
-    color: #000000;
-    font-size: 1.60156rem;
-    font-weight: 700;
-    line-height: 1.31869rem; /* 77.5% */
-    letter-spacing: 0.27225rem;
-}
-
-#logo h2 {
-    margin-top: 12px;
-    color: #7D7979;
-    font-size: 1.60156rem;
-    font-weight: 300;
-    line-height: 1.02094rem; /* 60% */
-    letter-spacing: 0.32331rem;
-}
-
-.navegação {
-    padding-top: 20px;
-    margin-left: 36rem;
+    width: 180px;
 }
 
 .navegação a {
     color: #5d5d5d;
-    font-size: 14px;
+
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.20869rem; /* 147.222% */
     text-decoration-line: none;
-    padding: 0 0.51rem;
-    
 
+    padding: 3px 5px;
+    transition: all 200ms ;
 }
 
 .navegação a:hover {
     background-color: #A00C0C;
-    color: white;
-    border-radius: 2px;
+    color: #fff;
+    border-radius: 3px;
     
 }
 
 .btn_login {
+    background: #FFF;
+    color: #000;
+
     border-radius: 2px;
     border: 0.5px solid #00000093;
-    background: #FFF;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2rem;
-    margin-right: 6rem;
-    margin-top: 1rem;
+
+    font-size: 14px;
+
+    padding: 10px 15px;
 
     cursor: pointer;
 }
@@ -117,12 +89,10 @@ main {
     background-color: #fdfdfd;
 }
 
-.btn_login span {
-    color: #000;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 1.5rem; /* 133.333% */
-    padding: 0.6rem 1.2rem;
+.btn_login i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
 }
 
  /* Estilos para o menu dropdown */
@@ -150,12 +120,12 @@ main {
 
 .menu-dropdown .submenu li a {
     text-decoration: none;
-    color: #000;
     display: block;
 }
 
 .menu-dropdown .submenu li:hover {
-    background-color: #f0f0f0;
+    background-color: #A00C0C;
+    
 }
 .menu-dropdown .submenu {
     display: none;
@@ -221,8 +191,9 @@ main {
 }
 
 #menu-dropdown-login #submenu-login span {
-    font-weight: 400;
-    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3d3d3d;
 }
 
 /* Estilando o Footer das paginas */

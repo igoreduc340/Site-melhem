@@ -29,9 +29,7 @@
     <div id="header">
 
         <a href="../pages/index.html" id="logo">
-            <img src="../images/Logo-removebg-vermelhopcima.png" alt="logo melhem">
-            <h1>MELHEM</h1>
-            <h2>IMÓVEIS</h2>
+            <img src="../images/Logo-completo.png" alt="logo melhem">
         </a>
 
         <div id='busca'>
@@ -53,12 +51,16 @@
             <a href="../pages/page_contato.html">CONTATO</a>
         </div>
 
-        <button class="btn_login">
-            <span>Login</span>
-        </button>
-
-
-
+        <divx id="menu-dropdown-login">
+            <a href="login.html"  class="btn_login">
+                <span><i class="ph ph-user-circle"></i>Login</span> 
+            </a>
+            <ul id="submenu-login">
+                <li id="btn-entrar"><a href="login.html">Entre</a></li>
+                <span>Ou</span>
+                <li id="btn-cadastre"><a href="register.html">Cadastre-se</a></li>
+            </ul>
+         
     </div>
     <div id="Bloco_de_filtros">
 
@@ -324,39 +326,45 @@
 
 
     <footer class="footer">
+    <div class="footer-section" id="logo_footer">
+        <img src="../images/Logo-removebg-branco.png" alt="Melhem Imóveis">
+    </div>
 
-        <div id="logo_footer">
-            <img src="../images/Logo-removebg-branco.png" alt="">
-            <span>Melhem Imóveis</span>
-        </div>
+    <div class="footer-section" id="sobre_melhem">
+        <h3>Melhem</h3>
+        <span>Sobre nós</span>
+        <span>Histórias de sucesso</span>
+        <span>Contato</span>
+    </div>
 
-        <div id="sobre_melhem">
-            <h3>Melhem</h3>
-            <span>Sobre nós</span>
-            <span>Historias de sucesso</span>
-            <span>Contato</span>
-        </div>
+    <div class="footer-section" id="localizacao">
+        <h3>Localização</h3>
+        <span>Rua Togo, 713</span>
+        <span>São Paulo - Zona Norte</span>
+    </div>
 
-        <div id="localizacao">
-            <h3>localização</h3>
-            <span>Rua Togo, 713</span>
-            <span>São Paulo - Zona Norte</span>
-        </div>
-
-        <div id="contatos">
-            <h3>Contatos</h3>
+    <div class="footer-section" id="contatos">
+        <h3>Contatos</h3>
+        <div class="contact-item">
             <h4>Telefone</h4>
             <span>(11) 2949-0666</span>
+        </div>
+        <div class="contact-item">
             <h4>WhatsApp</h4>
             <span>(11) 92912-6378</span>
+        </div>
+        <div class="contact-item">
             <h4>Email</h4>
             <span>contato@melhem.com.br</span>
         </div>
+    </div>
 
-        <div id="segue_gente">
-            <h3>Segue a Gente</h3>
-            <img src="../images/icones-redes-sociais.png" alt="">
-        </div>
+    <div class="footer-section" id="segue_gente">
+        <h3>Segue a Gente</h3>
+        <img src="../images/icones-redes-sociais.png" alt="Redes Sociais">
+    </div>
+</footer>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 </body>
 

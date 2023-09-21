@@ -5,7 +5,7 @@
  }
 
 #conteiner-search {
-    padding: 30px;
+    padding: 20px;
     background: #f5f5f5 url(../images/mulher-background-sbg.png) no-repeat center;
     background-size: cover;
     background-color: #f5f5f5 ;
@@ -22,8 +22,6 @@
     box-shadow: 7px 7px 6px 3px #2828284b;
     z-index: 0;
     padding: 30px 42px 30px 43px;
-    margin-top: 80px;
-
 }
 
 #box-search h1 {
