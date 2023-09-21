@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+    font-family: inter, sans-serif;
+}
+
+/* Estilizando o header */
+header {
+    width: 100%;
+    height: 13vmin;
+    min-height: 50px;
+    padding-left: 10%;
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: #474747;
+    cursor: pointer;
+    padding: 3px 5px;
+}
+
+header a:hover {
+    background-color: #fbfbfb;
+    border-radius: 7px;
+}
+
+header i {
+    font-size: 2.3rem;
+    color: #474747;
+}
+
+header span {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#logo {
+    display: flex;
+    align-items: end;
+    transform: translateX(115%);
+}
+
+#logo img {
+    width: 4rem;
+    margin-right: 3px;
+}
+
+#logo h1, h2 {
+    font-size: 1.0156rem;
+}
+
+#logo h1 {
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 0.27225rem;
+}
+
+#logo h2 {
+    color: #7D7979;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.32331rem;
+}

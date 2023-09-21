@@ -1,3 +1,4 @@
+/* EStilazanção da pesquisa de imoveis */
 #main-search {
     width: 100%;
     margin: 0 auto;
@@ -116,7 +117,7 @@
 }
 
 #btn-enviar:hover {
-    background-color: #A00C0C;
+    background-color: #860c0c;
 }
 /* estilando o conteudo da pagina inicial */
 
@@ -138,17 +139,18 @@ main {
     background-color: #c0cdff;
 }
 
-.card-resumo {
+#card-resumo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     background-color: #fff;
+    height: 300px;
     padding: 23px;
     border-radius: 2px;
-    height: 300px;
 }
 
-.card-resumo:hover {
+#card-resumo:hover {
     box-shadow: 5px 3px 10px #00000033;
 }
 
@@ -159,6 +161,7 @@ main {
 }
 
 #resumos p {
+    text-align: justify;
     color: #1b1b1b;
     font-size: 16px;
     font-weight: 400;
@@ -167,19 +170,25 @@ main {
 }
 
 #resumos button {
+    width: 100%;
+
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
     color: #fff;
-    background-color: #1f1e1e;
-    border-radius: 2px;
+    background-color: #212E61;
+    
+    border-radius: 5px;
     padding: 10px 15px;
     margin-top: 20px;
+
     cursor: pointer;
+    transition: all 300ms ease;
 }
 
 #resumos button:hover {
-    background-color: #9A1B1B;
+    transform: scale(1.05);
+    background-color: #b62020;
     color:white;
 }
 
@@ -256,6 +265,12 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+}
+
+#experimente p {
+    text-align: justify;
+    line-height: 30px;
+    font-size: 18px;
 }
 
 #experimente .conteiner-img-r p {
