@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Melhem Imóveis</title>
+        <title>Cadastre-se | Melhem</title>
     
         <!-- icones -->
         <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -19,44 +19,50 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
         <!-- links para os CSS -->
-        <link rel="stylesheet" href="../styles/base.css">
         <link rel="stylesheet" href="../styles/page_contato.css">
+    
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+     
     </head>
 <body>
-    
-    <div id="header">
 
-        <a href="../pages/index.html" id="logo">
-            <img src="../images/Logo-completo.png" alt="logo melhem">
+    <header>
+        
+        <a href="index.html">
+            <i class="ph ph-arrow-circle-left"></i>
+            <span>Voltar</span>
         </a>
+        <div id="logo">
+            <img src="../images/Logo-removebg-vermelhopcima.png" alt="logo melhem">
+            <h1>MELHEM</h1>
+            <h2>IMÓVEIS</h2>
+        <div>
 
-        <div class="navegação">
-            <div class="menu-dropdown">
-                <a href="#">BUSCAR IMÓVEIS</a>
-                <ul class="submenu">
-                    <li><a href="../pages/page_comprar.html">Comprar Imóveis</a></li>
-                    <li><a href="../pages/page_alugar.html">Alugar Imóveis</a></li>
-                </ul>
-            </div>
-            <a href="../pages/page_sobre.html">SOBRE</a>
-            <a href="../pages/page_contato.html">CONTATO</a>
-        </div>
+    </header>
 
-        <divx id="menu-dropdown-login">
-            <a href="login.html"  class="btn_login">
-                <span><i class="ph ph-user-circle"></i>Login</span> 
-            </a>
-            <ul id="submenu-login">
-                <li id="btn-entrar"><a href="login.html">Entre</a></li>
-                <span>Ou</span>
-                <li id="btn-cadastre"><a href="register.html">Cadastre-se</a></li>
-            </ul>
-         
+    <div id="cabecalho">
+        <h1>Entre em contato conosco</h1>
+        <span>Se você já tem uma conta, <a href="login.html">clique aqui</a> para fazer login.</span>
     </div>
 
-    <main>
-        <h1>Contato</h1>
-    </main>
+    <div id="conteiner-form">
+        
+        <form action="register">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" placeholder="Digite seu nome">
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="email@exemplo.com">
+
+
+            <label for="Mensagem">Mensagem</label>
+            <input type="Mensagem" id="msg" maxlength="255" placeholder="Digite sua mensagem">
+
+
+            <input type="submit" value="Enviar Mensagem!" id="btn-register">
+        </form>
+    </div>
 
     <footer class="footer">
 
@@ -74,6 +80,7 @@
 
         <div id="localizacao">
           <h3>localização</h3>
+          <span>Rua Togo, 713</span>
           <span>São Paulo - Zona Norte</span>
         </div>
 
@@ -92,8 +99,10 @@
           <img src="../images/icones-redes-sociais.png" alt="">
         </div>
 
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </footer>
 
-    </footer>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="../scripts/scroll-reveal.js"></script>
+    
 </body>
-</html>    
+</html>
