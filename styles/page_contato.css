@@ -1,285 +1,91 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: inter, sans-serif;
-}
-
-/* Estilizando o header */
-header {
-    width: 100%;
-    height: 13vmin;
-    min-height: 50px;
-    padding-left: 10%;
-    border-bottom: 1px solid #c0c0c0;
+main {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-header a {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    text-decoration: none;
-    color: #474747;
-    cursor: pointer;
-    padding: 3px 5px;
-}
-
-header a:hover {
-    background-color: #fbfbfb;
-    border-radius: 7px;
-}
-
-header i {
-    font-size: 2.3rem;
-    color: #474747;
-}
-
-header span {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-#logo {
-    display: flex;
-    align-items: end;
-    transform: translateX(115%);
-}
-
-#logo img {
-    width: 4rem;
-    margin-right: 3px;
-}
-
-#logo h1, h2 {
-    font-size: 1.0156rem;
-}
-
-#logo h1 {
-    color: #000000;
-    font-weight: 700;
-    letter-spacing: 0.27225rem;
-}
-
-#logo h2 {
-    color: #7D7979;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.32331rem;
-}
-
-/* Estilizando conteiner */
-#cabecalho {
-    width: 100%;
-    background-color: #f7f7f5;
-    text-align: center;
-}
-
-#cabecalho h1 {
-    font-size: 30px;
-    font-weight: 600;
-    padding: 35px;
-}
-
-#cabecalho span {
-    font-size: 16px;
-    display: block;
-    padding-bottom: 30px;
-
-    color: #5c5c5c;
-}
-
-#cabecalho span a {
-    color: #B02121;
-    text-decoration: none;
-}
-
-#cabecalho span a:hover {
-    text-decoration: underline;
-}
-
-#conteiner-form {
-    width: 33%;
-    
-    margin: 50px auto;
-}
-
-#conteiner-form form {
+#conteiner-contato {
+    width: 43%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
 }
 
-#conteiner-form form label {
-    width: 25%;
-    padding: 20px 0 5px 0;
-    font-size: 14px;
-    color: #5e5d5d;
+#conteiner-contato h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 81.046px; /* 109.375% */
 }
-#conteiner-form form input#msg {
-     /* Estilos para o campo de entrada "Mensagem" */
-     height: 200px; /* Defina a altura desejada aqui para alinhar o texto no topo */
-     text-align: left; /* Alinhar o texto à esquerda */
-     padding-bottom: 160px;
-     /* Outros estilos conforme necessário */
-        
-    }
-   
 
+#conteiner-contato p {
+    text-align: justify;
+    font-size: 17.4px;
+    line-height: 27.787px; /* 133.333% */
+    margin-top: 30px;
+}
 
+#conteiner-contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-#conteiner-form form input {
-    border-radius: 10px;
-    border: 1px solid #acabab;
+    margin: 30px 0 100px 0;
+}
+
+#conteiner-contato form label {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.787px; /* 120% */
+    padding-bottom: 7px;
+    margin-top: 40PX;
+}
+
+#conteiner-contato form input {
+    border-radius: 6px;
+    border: 2px solid #cfcfcf;
+    font-size: 18px;
+    color: #555555;
+
     padding: 17px;
     transition: border 500ms ;
 }
 
-#conteiner-form form input:hover {
-    border: 1px solid #B02121;
+#conteiner-contato form input:hover {
+    border: 2px solid #B02121;
 }
 
-#conteiner-form form input:focus {
-    border: 1px solid #B02121;
+#conteiner-contato form input:focus {
+    border: 2px solid #B02121;
     outline: none;
-    box-shadow: 2px 2px 2px #00000042;
+    box-shadow: 2px 2px 6px #00000031;
 }
 
-#conteiner-form form input::placeholder {
-    font-size: 13px;
-    color: #858585bb;
+#conteiner-contato form input::placeholder {
+    font-size: 14px;
+    color: #a09f9f;
 }
 
-#conteiner-form form #btn-register {
-    background-color: #B02121;
+#conteiner-contato form textarea {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 2px solid #cfcfcf;
+    font-size: 18px;
+    color: #555555;
+
+    padding: 17px;
+    transition: border 500ms ;
+}
+
+#conteiner-contato form #btn-contato {
+    width: 30%;
+    background-color: #212E61;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 2px;
     border: none;
-    color: #fff;
-    justify-self: end;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 30px 0 70px 0;
+    padding: 10px 15px;
 
-    transition: background-color 300ms ;
     cursor: pointer;
-}
-
-#conteiner-form form #btn-register:hover {
-    background-color: rgb(199, 35, 35);
-}
-
-#cabecalho {
-    visibility: hidden;
-}
-
-#conteiner-form {
-    visibility: hidden;
-}
-
-/* Estilando o Footer das paginas */
-
-.footer {
-    background: #333;
-    color: #fff;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    padding: 70px;
-    gap: 90px;
-}
-
-/* Logo do rodapé */
-.footer #logo_footer {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
-}
-
-.footer #logo_footer img {
-    width: 119px;
-    height: 119px;
-}
-
-.footer span {
-    font-weight: 200;
-    font-size: 15px;
-}
-
-/* sobre a Melhem */
-.footer #sobre_melhem {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #sobre_melhem h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer #sobre_melhem span {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* Localização */
-.footer #localizacao {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #localizacao h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer #localizacao span {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* Contattos */
-.footer #contatos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #contatos h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer #contatos h4 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.footer #contatos span {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* Segue a gente */
-.footer #segue_gente {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer #segue_gente h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
 }
