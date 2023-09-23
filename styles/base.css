@@ -205,6 +205,10 @@ main {
 
 /* Estilando o Footer das paginas */
 
+h3, h4 {
+    color: #fff;
+}
+
 .footer {
     background: #333;
     color: #fff;

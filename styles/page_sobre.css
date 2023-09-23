@@ -13,11 +13,11 @@ body {
 #sobre-nos h1 {
     font-size: 48px;
     font-weight: 700;
-
 }
 
 #sobre-nos h3 {
     font-size: 32px;
+    color: #000;
 }
 
 #sobre-nos p {

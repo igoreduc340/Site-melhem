@@ -50,7 +50,7 @@
     border-radius: 10px;
     border: 1px solid #acabab;
     padding: 17px;
-    transition: border 500ms ;
+    transition: border 300ms ;
 }
 
 #conteiner-form form input:hover {
