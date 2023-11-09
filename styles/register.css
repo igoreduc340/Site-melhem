@@ -198,3 +198,9 @@
     font-weight: 700;
     margin-bottom: 15px;
 }
+
+/* Estilização do texto de invalides */
+.invalid {
+    font-size: 12px;
+    color: #B02121;
+}
