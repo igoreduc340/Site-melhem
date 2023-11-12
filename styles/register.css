@@ -40,7 +40,7 @@
 }
 
 #conteiner-form form label {
-    width: 25%;
+    width: 30%;
     padding: 20px 0 5px 0;
     font-size: 14px;
     color: #5e5d5d;
@@ -84,6 +84,42 @@
 
 #conteiner-form form #btn-register:hover {
     background-color: rgb(199, 35, 35);
+}
+
+#conteiner-form form .showSenha {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 120px;
+    border: none;
+    font-size: 13px;
+    padding: 3px;
+    color: #8a8a8a;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+#conteiner-form form .showSenha:hover{
+    color: #030303;
+}
+
+#conteiner-form form .showSenha i {
+    padding: 1px 2px;
+    font-size: 16px;
+}
+
+#conteiner-form form .box-senha {
+    width: 100%;
+    position: relative;
+}
+
+#conteiner-form form .box-senha input {
+    width: 100%;
+}
+
+#conteiner-form form .box-senha a {
+    display: flex;
 }
 
 #cabecalho {
@@ -203,4 +239,5 @@
 .invalid {
     font-size: 12px;
     color: #B02121;
+    padding-top: 3px;
 }

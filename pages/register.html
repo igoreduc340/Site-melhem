@@ -65,14 +65,20 @@
         <label for="telefone">Telefone</label>
         <input type="text" id="telefone" maxlength="11" placeholder="(__)_ ____-____">
         <span class="invalid" id="invalidTel"> </span>
-
+        
         <label for="senha">Senha</label>
-        <input type="password" id="Senha" placeholder="*******************">
-        <span class="invalid" id="invalidPassword"></span>
+        <div class="box-senha">
+          <input type="password" id="Senha" placeholder="*******************">
+          <a class="showSenha" id="changeSenha"><i class="ph ph-eye"></i>Mostra senha</a>
+          <span class="invalid" id="invalidPassword"></span>
+        </div>
 
         <label for="confirmar_senha">Confirmar Senha</label>
-        <input type="password" id="confirmar_senha" placeholder="*******************">
-        <span class="invalid" id="invalidPasswordConfirm"></span>
+        <div class="box-senha">
+          <input type="password" id="confirmar_senha" placeholder="*******************">
+          <a class="showSenha" id="changeSenhaConfir"><i class="ph ph-eye"></i>Mostra senha</a>
+          <span class="invalid" id="invalidPasswordConfirm"></span>
+        </div>
 
         <input type="button" value="Começar!" id="btn-register">
       </form>
