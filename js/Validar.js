@@ -46,6 +46,7 @@ function validar_nome() {
     } else {
         nameInput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = 'Nome inválido'
+        nameInput.scrollIntoView({ behavior: 'smooth' });
         return false;
     }
 }
@@ -65,6 +66,7 @@ function validar_email() {
     } else {
         emailInput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = 'Email inválido'
+        emailInput.scrollIntoView({ behavior: 'smooth' });
         return false;
     }
 }
@@ -81,6 +83,7 @@ function validar_cpf() {
     } else {
         cpfInput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = 'CPF inválido'
+        cpfInput.scrollIntoView({ behavior: 'smooth' });
         return false;
     }
 }
@@ -99,6 +102,7 @@ function validar_telefone() {
     } else {
         telInput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = 'Telefone inválido'
+        telInput.scrollIntoView({ behavior: 'smooth' });
         return false;
     }
 }
@@ -147,6 +151,7 @@ function validarSenha() {
     if (cont !== 0){
         senhaInput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = mensagem;
+        senhaInput.scrollIntoView({ behavior: 'smooth' });
         return false;
     }
     else{
@@ -167,8 +172,13 @@ function senhas_iguais()  {
     if (senha !== confirmar_senha){
         confSenhainput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
         textInvalid.innerText = "As senhas fornecidas não coincidem. Por favor, certifique-se de digitar a mesma senha nos dois campos de senha."
-        
+        confSenhainput.scrollIntoView({ behavior: 'smooth' });
         return false;
+    }
+    if (senha == ''){
+        confSenhainput.style.borderColor = "#B02121" // Muda a cor da borda do input para vermelho
+        textInvalid.innerText = "Digite uma senha"
+        confSenhainput.scrollIntoView({ behavior: 'smooth' });
     }
     else{
         confSenhainput.style.borderColor = "#008000" // Muda a cor da borda do input para verde
@@ -206,20 +216,56 @@ btnChangeSenhaConfir.addEventListener('click', function() {
 // Função que será chamada para formatar o cpf da pessoa.
 function formatarCPF(inputElement) {
     inputElement.addEventListener("input", function() {
-        let value = inputElement.value.replace(/\D/g, ""); // Remove caracteres não numéricos
-        value = value.slice(0, 11); // Limita a 11 dígitos
-        value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"); // Insere traços
-        inputElement.value = value;
+        let input = inputElement.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+        let formattedInput = '';
+        
+        if (input.length > 0){
+            formattedInput = input.substring(0, 3);
+
+            if (input.length > 3){
+                formattedInput += '.' + input.substring(3, 6);
+
+                if (input.length > 6){
+                    formattedInput += '.' + input.substring(6, 9);
+
+                    if (input.length >= 9){
+                        formattedInput += '-' + input.substring(9, 11);
+                    }
+                }
+            }
+        }
+
+        inputElement.value = formattedInput;
     });
 }
 
 // Função que será chamada para formatar o telefone da pessoa.
 function formatarTelefone(inputElement) {
-  inputElement.addEventListener("input", function() {
-    let value = inputElement.value.replace(/\D/g, ""); // Remove caracteres não numéricos
-    value = value.slice(0, 11); // Limita a 11 dígitos
-    value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Insere parênteses e traço
-    inputElement.value = value;
+    inputElement.addEventListener("input", function() {
+        let input = inputElement.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        let formattedInput = '';
+
+        if (input.length > 0) {
+            formattedInput = '(' + input;
+
+            if (input.length > 2) {
+                formattedInput = '(' + input.substring(0, 2) + ')';
+
+                if (input.length > 7) {
+                    formattedInput += ' ' + input.substring(2, 7);
+
+                    if (input.length >= 11) {
+                        formattedInput += '-' + input.substring(7, 11);
+                    } else {
+                        formattedInput += '-' + input.substring(7);
+                    }
+                } else {
+                    formattedInput += ' ' + input.substring(2);
+                }
+            }
+        }
+
+        inputElement.value = formattedInput;
   });
 }
 
@@ -231,15 +277,11 @@ function formatarNome(inputElement) {
     });
   }
 
-
-
-
 // Execução do codigo 
-
 formatarCPF(cpfInput);
 formatarTelefone(telInput);
 formatarNome(nameInput);
 
 const botaoRegistro = document.getElementById("btn-register");
 
-botaoRegistro.onclick = comecarRegistro;
+botaoRegistro.onclick = comecarRegistro
