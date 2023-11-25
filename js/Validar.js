@@ -1,6 +1,7 @@
 // Função que será chamada quando o botão "Começar!" for clicado
 
 function comecarRegistro() {
+    console.log(cpfInput.value)
     
     var nome = validar_nome();
     var email = validar_email();
@@ -12,6 +13,7 @@ function comecarRegistro() {
     // Verifica se deu tudo certo , esse bloco de if só vai ser executado caso nome,email,cpf ,telefone e senha retornem true
 
     if (nome && email && cpf && telefone && senha) {
+        document.formRegister.submit()
         alert("Deu tudo certo,podemos colocar no banco de dados. :)");
        }
 }
@@ -236,6 +238,8 @@ function formatarCPF(inputElement) {
         }
 
         inputElement.value = formattedInput;
+        // let cpfNumerico = parseInt(inputElement.value.replace(/\D+/g, ''));
+        // return cpfInput.value = cpfNumerico
     });
 }
 
@@ -266,6 +270,8 @@ function formatarTelefone(inputElement) {
         }
 
         inputElement.value = formattedInput;
+        // let telNumerico = parseInt(inputElement.value.replace(/\D+/g, ''));
+        // return telInput.value = telNumerico
   });
 }
 
