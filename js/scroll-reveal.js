@@ -10,7 +10,6 @@ sr.reveal('#resumos',{
     rotate: {x: 0,  y:80, z:0}
 });
 
-
 sr.reveal('#quem-somos',{
     duration: 2000,
     rotate: {x: 80,  y:0, z:0}
@@ -56,6 +55,11 @@ sr.reveal('#img-sobre',{
 });
 
 sr.reveal('#conteiner-contato',{
+    duration: 1500,
+    rotate: {x: 70,  y:0, z:0}
+});
+
+sr.reveal('#boxAlugar',{
     duration: 1500,
     rotate: {x: 70,  y:0, z:0}
 });

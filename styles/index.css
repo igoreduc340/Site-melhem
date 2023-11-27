@@ -191,7 +191,6 @@ main {
 }
 
 #resumos button:hover {
-    transform: scale(1.05);
     background-color: #b62020;
     color:white;
 }
@@ -423,7 +422,6 @@ main {
 }
 
 /* escondendo o conteudo para fazer o scroll reveal */
-
-/* #resumo1, #resumo2, #resumo3, #quem-somos, #experimente {
+/* #resumo1, #resumo2, #resumo3, #quem-somos, #experimente, #imoveis-destaque {
     visibility: hidden;
 } */

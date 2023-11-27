@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastre-se | Melhem</title>
+        <title>Melhem Imóveis</title>
     
         <!-- icones -->
         <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -19,9 +19,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
         <!-- links para os CSS -->
-        <link rel="stylesheet" href="../styles/register.css">
-        <link rel="stylesheet" href="../styles/header-login-register.css">
-    
+        <link rel="stylesheet" href="../styles/greetings_use.css">
+
         <!-- scroll reveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
      
@@ -30,10 +29,6 @@
 
     <header>
         
-        <a href="login.html">
-            <i class="ph ph-arrow-circle-left"></i>
-            <span>Voltar</span>
-        </a>
         <div id="logo">
             <img src="../images/Logo-removebg-vermelhopcima.png" alt="logo melhem">
             <h1>MELHEM</h1>
@@ -42,47 +37,31 @@
 
     </header>
 
-    <div id="cabecalho">
-        <h1>Cadastre, é fácil e rápido</h1>
-        <span>Se você já tem uma conta, <a href="login.html">clique aqui</a> para fazer login.</span>
-    </div>
-
-    <div id="conteiner-form">
-        
-      <form name="formRegister" action="register.jsp"  method="post" >
-        <label for="name">Nome completo</label>
-        <input type="text" id="name" name="name" placeholder="Digite seu nome">
-        <span class="invalid" id="invalidName"></span>
-        
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="email@exemplo.com">
-        <span class="invalid" id="invalidEmail"></span>
-
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" name="cpf" placeholder="___.___.___-__">
-        <span class="invalid" id="invalidCPF"></span>
-
-        <label for="telefone">Telefone</label>
-        <input type="text" id="telefone" name="telefone" placeholder="(__)_ ____-____">
-        <span class="invalid" id="invalidTel"> </span>
-        
-        <label for="senha">Senha</label>
-        <div class="box-senha">
-          <input type="password" id="Senha" name="Senha" placeholder="*******************">
-          <a class="showSenha" id="changeSenha"><i class="ph ph-eye"></i>Mostra senha</a>
-          <span class="invalid" id="invalidPassword"></span>
+    <main>
+        <div id="topInfo">
+            <h1>Parabêns!! Agora você está pronto para usar os nosso serviços. </h1>
+            <h3>Descubra a variedade de opções disponíveis para aluguel e compra de imóveis:</h3>
         </div>
 
-        <label for="confirmar_senha">Confirmar Senha</label>
-        <div class="box-senha">
-          <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="*******************">
-          <a class="showSenha" id="changeSenhaConfir"><i class="ph ph-eye"></i>Mostra senha</a>
-          <span class="invalid" id="invalidPasswordConfirm"></span>
+        <div id="conteinerBox">
+            <div id="boxAlugar">
+                <img src="../images/gato.png" alt="">
+                <div class="conteinerInfos">
+                    <h3>Imóveis para Alugar</h3>
+                    <p>Descubra o conforto de viver em uma casa que reflete o seu estilo. Encontre a casa perfeita para alugar conosco, oferecendo opções que se alinham às suas necessidades e desejos</p>
+                    <a href="page_alugar.html" class="button">Conhecer casas</a>
+                </div>
+            </div>
+            <div id="boxComprar">
+                <img src="../images/janela.png" alt="">
+                <div class="conteinerInfos">
+                    <h3>Imóveis para comprar</h3>
+                    <p>Seja o dono da casa dos seus sonhos! Explore as propriedades disponíveis para compra e inicie sua jornada rumo a um novo capítulo. Oferecemos opções que encantam e se encaixam no seu estilo de vida.</p>
+                    <a href="page_comprar.html" class="button">Conhecer casas</a>
+                </div>
+            </div>
         </div>
-
-        <input type="button" value="Começar!" id="btn-register">
-      </form>
-    </div>
+    </main>
 
     <footer class="footer">
 
@@ -119,11 +98,9 @@
           <img src="../images/icones-redes-sociais.png" alt="">
         </div>
 
-  </footer>
+    </footer>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="../js/scroll-reveal.js"></script>
-    <script src="../js/Validar.js"></script>
     
 </body>
 </html>

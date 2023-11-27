@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+    font-family: inter, sans-serif;
+}
+
+/* Estilizando o header */
+header {
+    width: 100%;
+    height: 13vmin;
+    min-height: 50px;
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    display: flex;
+    align-items: end;
+}
+
+#logo img {
+    width: 4rem;
+    margin-right: 3px;
+}
+
+#logo h1, h2 {
+    font-size: 1.0156rem;
+}
+
+#logo h1 {
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 0.27225rem;
+}
+
+#logo h2 {
+    color: #7D7979;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.32331rem;
+}
+
+
+
+main {
+    width: 85%;
+    margin: 20px auto;
+}
+
+main #topInfo {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main #conteinerBox {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: space-between;
+    color: #fff;
+}
+
+main #conteinerBox img {
+    width:40%;
+}
+
+main #conteinerBox .conteinerInfos {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+main #conteinerBox .conteinerInfos h3 {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+main #conteinerBox .conteinerInfos p {
+    background-color: #0000002d;
+    padding: 10px;
+    font-size: 1.3em;
+    border-radius: 10px;
+}
+
+main #conteinerBox .button {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 500ms ease;
+}
+
+main #conteinerBox .button:hover {
+    background-color: #4fa4ff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+}
+
+main #conteinerBox #boxAlugar {
+    display: flex;
+    flex-direction: row;
+    background-color: #f1bc6c;
+}
+
+main #conteinerBox #boxComprar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(241, 150, 108);
+}
+
+/* Estilando o Footer das paginas */
+.footer {
+    background: #333;
+    color: #fff;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    gap: 90px;
+}
+
+/* Logo do rodapé */
+.footer #logo_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+}
+
+.footer #logo_footer img {
+    width: 119px;
+    height: 119px;
+}
+
+.footer span {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+/* sobre a Melhem */
+.footer #sobre_melhem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #sobre_melhem h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #sobre_melhem span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Localização */
+.footer #localizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #localizacao h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #localizacao span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Contattos */
+.footer #contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #contatos h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer #contatos h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer #contatos span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Segue a gente */
+.footer #segue_gente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer #segue_gente h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
