@@ -1,10 +1,5 @@
 window.sr = ScrollReveal({ reset:true });
 
-sr.reveal('#card-resumo',{
-    duration: 2500,
-    rotate: {x: 0,  y:80, z:0}
-});
-
 sr.reveal('#resumos',{
     duration: 2000,
     rotate: {x: 0,  y:80, z:0}
@@ -12,15 +7,10 @@ sr.reveal('#resumos',{
 
 sr.reveal('#quem-somos',{
     duration: 2000,
-    rotate: {x: 80,  y:0, z:0}
+    rotate: {x: 0,  y:0, z:0}
 });
 
 sr.reveal('#experimente',{
-    duration: 2000,
-    rotate: {x: 80,  y:0, z:0}
-});
-
-sr.reveal('#imoveis-destaque',{
     duration: 2000,
     rotate: {x: 80,  y:0, z:0}
 });
@@ -60,6 +50,6 @@ sr.reveal('#conteiner-contato',{
 });
 
 sr.reveal('#boxAlugar',{
-    duration: 1500,
-    rotate: {x: 70,  y:0, z:0}
+    duration: 1000,
+    rotate: {x: 10,  y:0, z:0}
 });

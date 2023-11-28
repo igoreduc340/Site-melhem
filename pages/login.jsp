@@ -1,3 +1,5 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -30,7 +32,7 @@
 
     <header>
         
-        <a href="../index.html">
+        <a href="../index.jsp">
             <i class="ph ph-arrow-circle-left"></i>
             <span>Voltar</span>
         </a>
@@ -43,10 +45,20 @@
     </header>
     
     <div id="conteiner-form-login">
+        <%
+        //verifica se a session chamada usuario existe e se o usuario ja esta logado
+        if (  session.getAttribute("usuario") != null ) {
+            // Se sim, essa mensagem aparecerá
+            out.print("<h1>Login já feito, volte para a página inicial") ;
+        }
+        else {   
+            // Se não estiver logado a pagina aparecerá normalmente 
+        %>
+
         <div id="box-login">
             <h1>Entre na sua conta</h1>
             <div class="linha"></div>
-            <form action="login">
+            <form action="../server/verificarLogin.jsp" method="post">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="email@exemplo.com">
                 <label for="senha">Senha</label>
@@ -56,6 +68,11 @@
             </form>
             <span >Ainda não tem conta? <a href="register.html" id="cadastre">Cadastre-se</a></span>
         </div>
+
+        <%
+        } // Fecha as chaves do if que verifica a sessão
+        %>
+
     </div>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -63,3 +80,4 @@
 
 </body>
 </html>
+  

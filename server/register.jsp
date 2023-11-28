@@ -13,7 +13,6 @@
     long telefone = Long.parseLong(telString);  // Converta o telefone para um número inteiro
 
     String senha = request.getParameter("Senha");
-    String confirmar_senha = request.getParameter("confirmar_senha");
 
     //Variaveis do banco de dados
     String banco = "melhem";
@@ -34,7 +33,7 @@
     conexao = DriverManager.getConnection(endereco, usuario, password);
 
     //Cria a variavel sql como o comando INSERT
-    String sql = "INSERT INTO clientes (nome, email, cpf, telefone, senha, confirmar_senha) values (?,?,?,?,?,?)" ;
+    String sql = "INSERT INTO clientes (nome, email, cpf, telefone, senha) values (?,?,?,?,?)" ;
 
     // Prepara o comando Sql    
     PreparedStatement stm = conexao.prepareStatement(sql) ;
@@ -43,7 +42,6 @@
     stm.setLong(3, cpf);
     stm.setLong(4, telefone);
     stm.setString( 5 , senha ) ;
-    stm.setString( 6 , confirmar_senha ) ;
 
     stm.execute() ;
     stm.close() ;

@@ -1,3 +1,5 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,10 +8,10 @@
     <title>Melhem Imóveis</title>
 
     <!-- icones -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
-    <link rel="manifest" href="../icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
@@ -29,7 +31,7 @@
     
     <div id="header">
 
-        <a href="index.html" id="logo">
+        <a href="index.jsp" id="logo">
             <img src="images/Logo-completo.png" alt="logo melhem">
         </a>
 
@@ -41,20 +43,42 @@
                     <li><a href="pages/page_alugar.html">Alugar Imóveis</a></li>
                 </ul>
             </div>
-            <a href="pages/page_sobre.html">SOBRE</a>
-            <a href="pages/page_contato.html">CONTATO</a>
+            <a href="pages/page_sobre.jsp">SOBRE</a>
+            <a href="pages/page_contato.jsp">CONTATO</a>
         </div>
 
-        <div id="menu-dropdown-login">
-            <a href="pages/login.html"  class="btn_login">
-                <span><i class="ph ph-user-circle"></i>Login</span> 
-            </a>
-            <ul id="submenu-login">
-                <li id="btn-entrar"><a href="pages/login.html">Entre</a></li>
-                <span>Ou</span>
-                <li id="btn-cadastre"><a href="pages/register.html">Cadastre-se</a></li>
-            </ul>
-        </div>    
+        <%-- Verifica se existe a session --%>
+        <%
+        if (session.getAttribute("usuario") == null) {
+
+            out.print("<div id='menu-dropdown-login'>");
+
+                out.print("<a href='pages/login.jsp'  class='btn_login'>");
+                    out.print("<span><i class='ph ph-user-circle'></i>Login</span>");
+                out.print("</a>");
+
+                out.print("<ul id='submenu-login'>");
+                    out.print("<li id='btn-entrar'><a href='pages/login.jsp'>Entre</a></li>");
+                    out.print("<span>Ou</span>");
+                    out.print("<li id='btn-cadastre'><a href='pages/register.html'>Cadastre-se</a></li>");
+                out.print("</ul>");
+
+            out.print("</div>");
+
+        } else {
+                out.print("<div id='menu-dropdown-login'>");
+                    out.print("<span><i class='ph ph-user-circle'></i>");
+                        out.print(session.getAttribute("usuario"));
+                    out.print("</span>");
+                         
+                    out.print("<ul id='submenu-login'>");
+                        out.print("<li id='btn-entrar'><a href='pages/meu_perfil.jsp'>Meu perfil</a></li>");
+                        out.print("<span>Ou</span>");
+                        out.print("<li id='btn-cadastre'><a href='server/logout.jsp'>Sair</a></li>");
+                    out.print("</ul>");
+                out.print("</div>");          
+        }
+        %>
          
     </div>
 
@@ -129,14 +153,14 @@
             <div id="card-resumo">
                 <h3>Agende Sua Visita</h3>
                 <p>Quer conhecer pessoalmente as propriedades que mais chamam sua atenção? Agende sua visita agora e dê o primeiro passo para sua nova casa.</p>
-                <a href="pages/page_contato.html"><button>Agendar Visita</button></a>
+                <a href="pages/page_contato.jsp"><button>Agendar Visita</button></a>
             </div>
         </div>
 
         <div id="quem-somos">
             <h1>Quem Somos</h1>
             <p>Na Melhem Imóveis, estamos comprometidos em tornar seus sonhos de encontrar o lar perfeito uma realidade. Com mais de 50 anos de experiência no mercado imobiliário, somos apaixonados por conectar pessoas com as casas que amam.</p>
-            <a href="pages/page_sobre.html">Saiba mais...</a>
+            <a href="pages/page_sobre.jsp">Saiba mais...</a>
             <div id="images">
                 <img src="images/fotos/photo1.png" alt="">
                 <img class="margin" src="images/fotos/photo2.png" alt="">
