@@ -14,7 +14,6 @@ function comecarRegistro() {
 
     if (nome && email && cpf && telefone && senha) {
         document.formRegister.submit()
-        alert("Deu tudo certo,podemos colocar no banco de dados. :)");
        }
 }
 

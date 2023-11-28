@@ -1,3 +1,5 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -29,7 +31,7 @@
 
     <div id="header">
 
-        <a href="../index.html" id="logo">
+        <a href="../index.jsp" id="logo">
             <img src="../images/Logo-completo.png" alt="logo melhem">
         </a>
 
@@ -37,23 +39,45 @@
             <div class="menu-dropdown">
                 <a href="#">BUSCAR IMÓVEIS</a>
                 <ul class="submenu">
-                    <li><a href="../pages/page_comprar.html">Comprar Imóveis</a></li>
-                    <li><a href="../pages/page_alugar.html">Alugar Imóveis</a></li>
+                    <li><a href="page_comprar.html">Comprar Imóveis</a></li>
+                    <li><a href="page_alugar.html">Alugar Imóveis</a></li>
                 </ul>
             </div>
-            <a href="../pages/page_sobre.html">SOBRE</a>
-            <a href="../pages/page_contato.html">CONTATO</a>
+            <a href="page_sobre.jsp">SOBRE</a>
+            <a href="page_contato.jsp">CONTATO</a>
         </div>
 
-        <divx id="menu-dropdown-login">
-            <a href="login.html"  class="btn_login">
-                <span><i class="ph ph-user-circle"></i>Login</span> 
-            </a>
-            <ul id="submenu-login">
-                <li id="btn-entrar"><a href="login.html">Entre</a></li>
-                <span>Ou</span>
-                <li id="btn-cadastre"><a href="register.html">Cadastre-se</a></li>
-            </ul>
+        <%
+        if (session.getAttribute("usuario") == null) {
+
+            out.print("<div id='menu-dropdown-login'>");
+
+                out.print("<a href='login.jsp'  class='btn_login'>");
+                    out.print("<span><i class='ph ph-user-circle'></i>Login</span>");
+                out.print("</a>");
+
+                out.print("<ul id='submenu-login'>");
+                    out.print("<li id='btn-entrar'><a href='login.jsp'>Entre</a></li>");
+                    out.print("<span>Ou</span>");
+                    out.print("<li id='btn-cadastre'><a href='pages/register.html'>Cadastre-se</a></li>");
+                out.print("</ul>");
+
+            out.print("</div>");
+
+        } else {
+                out.print("<div id='menu-dropdown-login'>");
+                    out.print("<span><i class='ph ph-user-circle'></i>");
+                        out.print(session.getAttribute("usuario"));
+                    out.print("</span>");
+                         
+                    out.print("<ul id='submenu-login'>");
+                        out.print("<li id='btn-entrar'><a href='pages/meu_perfil.jsp'>Meu perfil</a></li>");
+                        out.print("<span>Ou</span>");
+                        out.print("<li id='btn-cadastre'><a href='server/logout.jsp'>Sair</a></li>");
+                    out.print("</ul>");
+                out.print("</div>");          
+        }
+        %>
          
     </div>
 

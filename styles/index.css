@@ -422,6 +422,6 @@ main {
 }
 
 /* escondendo o conteudo para fazer o scroll reveal */
-/* #resumo1, #resumo2, #resumo3, #quem-somos, #experimente, #imoveis-destaque {
+#quem-somos, #experimente {
     visibility: hidden;
 } */
