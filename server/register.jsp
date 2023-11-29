@@ -47,6 +47,6 @@
     stm.close() ;
 
     out.println("<script>");
-    out.println("   window.location.href = '../pages/greetings_user.html';");
+    out.println("   window.location.href = '../pages/greetings_user.jsp';");
     out.println("</script>");
 %>

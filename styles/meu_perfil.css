@@ -1,0 +1,155 @@
+/* Estilizando conteiner */
+#cabecalho {
+    width: 100%;
+    background-color: #f7f7f5;
+    text-align: center;
+}
+
+#cabecalho h1 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 35px;
+}
+
+#cabecalho span {
+    font-size: 16px;
+    display: block;
+    padding-bottom: 30px;
+
+    color: #5c5c5c;
+}
+
+#cabecalho span a {
+    color: #B02121;
+    text-decoration: none;
+}
+
+#cabecalho span a:hover {
+    text-decoration: underline;
+}
+
+#conteiner-form {
+    width: 33%;
+    
+    margin: 50px auto;
+}
+
+#conteiner-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#conteiner-form form label {
+    width: 30%;
+    padding: 20px 0 5px 0;
+    font-size: 14px;
+    color: #5e5d5d;
+}
+
+#conteiner-form form input {
+    border-radius: 10px;
+    border: 1px solid #acabab;
+    padding: 17px;
+    transition: border 300ms ;
+}
+
+#conteiner-form form input:hover {
+    border: 1px solid #B02121;
+}
+
+#conteiner-form form input:focus {
+    border: 1px solid #B02121;
+    outline: none;
+    box-shadow: 2px 2px 2px #00000042;
+}
+
+#conteiner-form form input::placeholder {
+    font-size: 13px;
+    color: #858585bb;
+}
+
+#conteiner-form form .btn-register {
+    background-color: #B02121;
+    border: 1px solid #ffffff00;
+    color: #fff;
+    justify-self: end;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 30px 0 70px 0;
+
+    transition: background-color 300ms ;
+    cursor: pointer;
+}
+
+#conteiner-form form .btn-register:hover {
+    background-color: rgb(199, 35, 35);
+}
+
+#conteiner-form form .desactivate {
+    background-color: #a75050;
+    border: none;
+    color: #fa7f7f;
+    justify-self: end;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 30px 0 70px 0;
+
+}
+
+#conteiner-form form .desactivate:hover {
+    border: none;
+}
+
+
+#conteiner-form form .showSenha {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 120px;
+    border: none;
+    font-size: 13px;
+    padding: 3px;
+    color: #8a8a8a;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+#conteiner-form form .showSenha:hover{
+    color: #030303;
+}
+
+#conteiner-form form .showSenha i {
+    padding: 1px 2px;
+    font-size: 16px;
+}
+
+#conteiner-form form .box-senha {
+    width: 100%;
+    position: relative;
+}
+
+#conteiner-form form .box-senha input {
+    width: 100%;
+}
+
+#conteiner-form form .box-senha a {
+    display: flex;
+}
+
+#cabecalho {
+    visibility: hidden;
+}
+
+#conteiner-form {
+    visibility: hidden;
+}
+
+/* Estilização do texto de invalides */
+.invalid {
+    font-size: 12px;
+    color: #B02121;
+    padding-top: 3px;
+}

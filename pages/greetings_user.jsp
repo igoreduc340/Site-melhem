@@ -1,3 +1,5 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -38,7 +40,9 @@
     </header>
     
     <div id="cabecalho">
-        <h1>Parabêns, seu cadastro foi realizado</h1>
+        <h1>Parabêns
+        <% out.print(session.getAttribute("usuario")); %>
+        , seu cadastro foi realizado</h1>
     </div>
 
     <main>

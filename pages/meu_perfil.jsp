@@ -36,7 +36,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastre-se | Melhem</title>
+        <title>Meu perfil | Melhem</title>
     
         <!-- icones -->
         <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -52,7 +52,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
         <!-- links para os CSS -->
-        <link rel="stylesheet" href="../styles/page_contato.css">
+        <link rel="stylesheet" href="../styles/meu_perfil.css">
         <link rel="stylesheet" href="../styles/base.css">
 
         <!-- scroll reveal -->
@@ -70,11 +70,11 @@
             <div class="menu-dropdown">
                 <a href="#">BUSCAR IMÓVEIS</a>
                 <ul class="submenu">
-                    <li><a href="pages/page_comprar.html">Comprar Imóveis</a></li>
-                    <li><a href="pages/page_alugar.html">Alugar Imóveis</a></li>
+                    <li><a href="page_comprar.html">Comprar Imóveis</a></li>
+                    <li><a href="page_alugar.html">Alugar Imóveis</a></li>
                 </ul>
             </div>
-            <a href="page/sobre.jsp">SOBRE</a>
+            <a href="page_sobre.jsp">SOBRE</a>
             <a href="page_contato.jsp">CONTATO</a>
         </div>
 
@@ -104,7 +104,7 @@
                     out.print("<ul id='submenu-login'>");
                         out.print("<li id='btn-entrar'><a href='meu_perfil.jsp'>Meu perfil</a></li>");
                         out.print("<span>Ou</span>");
-                        out.print("<li id='btn-cadastre'><a href='server/logout.jsp'>Sair</a></li>");
+                        out.print("<li id='btn-cadastre'><a href='../server/logout.jsp'>Sair</a></li>");
                     out.print("</ul>");
                 out.print("</div>");          
         }
@@ -112,16 +112,69 @@
          
     </div>
 
-    <main>
-        <%
-        
-        while(dados.next())
-        {
-            out.print(dados.getString("email"));
-        }
+    <div id="cabecalho">
+        <h1>Olá, 
+        <%  out.print(session.getAttribute("usuario")); %> <%-- Coloca o nome do usuario na tela --%>
+        </h1>
+        <span>Consulte seus dados, e se desejar, podem ser alterados.</span>
+    </div>
 
+    <div id="conteiner-form">
+
+        <%-- Pega os dados do banco de dados --%>
+        <% while(dados.next()) { %>  <%-- Abre o bloco do WHILE --%>
+
+            <form name="formRegister" action="../server/alterar.jsp" method="post">
+
+                <%-- Input do nome --%>
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" value='<% out.print(dados.getString("nome")); %>'> <%-- Pega o nome do usuario no banco de dados --%>
+                <span class="invalid" id="invalidName"></span>
+
+                <%-- Input do email --%>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" value='<% out.print(dados.getString("email")); %>'> <%-- Pega o email do usuario no banco de dados --%>
+                <span class="invalid" id="invalidEmail"></span>
+
+                <%-- Input do cpf --%>
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="___.___.___-__" value='<% out.print(dados.getString("cpf")); %>'> <%-- Pega o cpf do usuario no banco de dados --%>
+                <span class="invalid" id="invalidCPF"></span>
+
+                <%-- Input do telefone --%>
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" placeholder="(__)_ ____-____" value='<% out.print(dados.getString("telefone")); %>'> <%-- Pega o telefone do usuario no banco de dados --%>
+                <span class="invalid" id="invalidTel"> </span>
+
+                <%-- Input do botão --%>
+                <input type="button" value="Salvar" id="salvarButton" class="desactivate">
+            </form>
+
+            <script>
+                // Adiciona um ouvinte de evento a cada campo de entrada para monitorar as mudanças
+                var nome = document.getElementById("name");
+                var email = document.getElementById('email');
+                var cpf = document.getElementById("cpf");
+                var telefone = document.getElementById('telefone');
+
+                nome.addEventListener('input', enableSaveButton);
+                email.addEventListener('input', enableSaveButton);
+                cpf.addEventListener('input', enableSaveButton);
+                telefone.addEventListener('input', enableSaveButton);
+
+                function enableSaveButton() {
+                    // Habilita o botão de salvar quando houver mudanças nos campos de entrada
+                    document.getElementById('salvarButton').classList.remove('desactivate');
+                    document.getElementById('salvarButton').classList.add('btn-register');
+                }
+                
+            </script>
+
+        <%
+        } // Fecha o bloco do WHILE
         %>
-    </main>
+
+    </div> <%-- Fecha a DIV do conteiner --%>
 
     <footer class="footer">
 
@@ -162,6 +215,6 @@
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="../js/scroll-reveal.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/alterar_dados.js"></script>
 </body>
 </html>
