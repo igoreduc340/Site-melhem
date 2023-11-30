@@ -9,8 +9,7 @@ function comecarRegistro() {
     var telefone = validar_telefone();
 
     // Verifica se deu tudo certo , esse bloco de if só vai ser executado caso nome,email,cpf ,telefone e senha retornem true
-
-    if (nome && email && cpf && telefone) {
+    if (nome && email && cpf && telefone && enableButton) {
         document.formRegister.submit()
        }
 }
@@ -27,8 +26,22 @@ emailInput.addEventListener('blur', validar_email);
 cpfInput.addEventListener('blur', validar_cpf);
 telInput.addEventListener('blur', validar_telefone);
 
-// Função que será chamada para validar o nome da pessoa , deve ter entre 3 caracteres e 50 caracteres.
+// Toda vez que tiver alguma alteração no valor dos inputs, chamará a função que irá habilitar o botão
+nameInput.addEventListener('input', enableSaveButton);
+emailInput.addEventListener('input', enableSaveButton);
+cpfInput.addEventListener('input', enableSaveButton);
+telInput.addEventListener('input', enableSaveButton);
 
+// Função que habilita o botão de salvar alterações.
+let enableButton = false
+function enableSaveButton() {
+    // Habilita o botão de salvar quando houver mudanças nos campos de entrada
+    document.getElementById('salvarButton').classList.remove('desactivate');
+    document.getElementById('salvarButton').classList.add('btn-register');
+    enableButton = true
+}
+
+// Função que será chamada para validar o nome da pessoa , deve ter entre 3 caracteres e 50 caracteres.
 function validar_nome() {
     var nome = nameInput.value;
     nome = nome.trim();
@@ -104,6 +117,11 @@ function validar_telefone() {
 
 // Função que será chamada para formatar o cpf da pessoa.
 function formatarCPF(inputElement) {
+    // Formata o campo quando a pagina e carregada.
+    let value = inputElement.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+    inputElement.value = value; 
+
+    // Função que e chamada, toda vez que acontece uma alteração no input
     inputElement.addEventListener("input", function() {
         let input = inputElement.value.replace(/\D/g, ""); // Remove caracteres não numéricos
         let formattedInput = '';
@@ -132,6 +150,11 @@ function formatarCPF(inputElement) {
 
 // Função que será chamada para formatar o telefone da pessoa.
 function formatarTelefone(inputElement) {
+    // Formata o campo quando a pagina e carregada.
+    let value = inputElement.value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Insere parênteses e traço
+    inputElement.value = value;
+
+    // Função que e chamada, toda vez que acontece uma alteração no input
     inputElement.addEventListener("input", function() {
         let input = inputElement.value.replace(/\D/g, ''); // Remove caracteres não numéricos
         let formattedInput = '';

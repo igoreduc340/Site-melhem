@@ -149,27 +149,7 @@
                 <%-- Input do botão --%>
                 <input type="button" value="Salvar" id="salvarButton" class="desactivate">
             </form>
-
-            <script>
-                // Adiciona um ouvinte de evento a cada campo de entrada para monitorar as mudanças
-                var nome = document.getElementById("name");
-                var email = document.getElementById('email');
-                var cpf = document.getElementById("cpf");
-                var telefone = document.getElementById('telefone');
-
-                nome.addEventListener('input', enableSaveButton);
-                email.addEventListener('input', enableSaveButton);
-                cpf.addEventListener('input', enableSaveButton);
-                telefone.addEventListener('input', enableSaveButton);
-
-                function enableSaveButton() {
-                    // Habilita o botão de salvar quando houver mudanças nos campos de entrada
-                    document.getElementById('salvarButton').classList.remove('desactivate');
-                    document.getElementById('salvarButton').classList.add('btn-register');
-                }
-                
-            </script>
-
+            
         <%
         } // Fecha o bloco do WHILE
         %>
