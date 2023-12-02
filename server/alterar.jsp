@@ -12,7 +12,8 @@
     telString = telString.replaceAll("\\D", "");  // Remova os caracteres não numéricos do telefone
     long telefone = Long.parseLong(telString);  // Converta o telefone para um número inteiro
 
-    String senha = request.getParameter("Senha");
+    Object usuarioObj = session.getAttribute("usuario");
+    String nomeUsuario = (usuarioObj != null) ? usuarioObj.toString() : null;
 
     //Variaveis do banco de dados
     String banco = "melhem";
@@ -32,8 +33,8 @@
     //Abrir com o banco de dados
     conexao = DriverManager.getConnection(endereco, usuario, password);
 
-    //Cria a variavel sql como o comando INSERT
-    String sql = "INSERT INTO clientes (nome, email, cpf, telefone, senha) values (?,?,?,?,?)" ;
+    // Cria a variável sql como o comando UPDATE
+    String sql = "UPDATE clientes SET nome=?, email=?, cpf=?, telefone=? WHERE nome=?" ;
 
     // Prepara o comando Sql    
     PreparedStatement stm = conexao.prepareStatement(sql) ;
@@ -41,12 +42,14 @@
     stm.setString( 2 , email ) ;
     stm.setLong(3, cpf);
     stm.setLong(4, telefone);
-    stm.setString( 5 , senha ) ;
+    stm.setString(5, nomeUsuario);
 
     stm.execute() ;
     stm.close() ;
 
+    session.setAttribute("usuario" , nome ) ;
+
     out.println("<script>");
-    out.println("   window.location.href = '../pages/greetings_user.jsp';");
+    out.println("   window.location.href = '../pages/meu_perfil.jsp';");
     out.println("</script>");
 %>

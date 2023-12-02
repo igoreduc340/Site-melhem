@@ -71,9 +71,9 @@
                     out.print("</span>");
                          
                     out.print("<ul id='submenu-login'>");
-                        out.print("<li id='btn-entrar'><a href='pages/meu_perfil.jsp'>Meu perfil</a></li>");
+                        out.print("<li id='btn-entrar'><a href='meu_perfil.jsp'>Meu perfil</a></li>");
                         out.print("<span>Ou</span>");
-                        out.print("<li id='btn-cadastre'><a href='server/logout.jsp'>Sair</a></li>");
+                        out.print("<li id='btn-cadastre'><a href='../server/logout.jsp'>Sair</a></li>");
                     out.print("</ul>");
                 out.print("</div>");          
         }
