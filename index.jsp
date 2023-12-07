@@ -1,4 +1,35 @@
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%@page language="java" import="java.sql.*" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
+<%
+    //Variaveis que armazena informações digitadas pelo usuário
+    String vlogin = request.getParameter("email") ;
+    String vsenha = request.getParameter("senha") ;
+
+    //variaveis para o banco de dados
+    String banco    = "melhem" ;
+    String endereco = "jdbc:mysql://localhost:3306/"+banco;
+    String usuario  = "root";
+    String senha    = "" ;
+
+    //Variavel para o Driver
+    String driver = "com.mysql.jdbc.Driver" ;
+
+    //Carregar o driver na memória
+    Class.forName( driver ) ;
+
+    //Cria a variavel para conectar com o banco de dados
+    Connection conexao ;
+
+    //Abrir a conexao com o banco de dados
+    conexao = DriverManager.getConnection(endereco, usuario, senha) ;
+
+    String sql = "SELECT * FROM imoveis" ;
+
+    //Cria o statement para executar o comando no banco
+    PreparedStatement stm = conexao.prepareStatement(sql) ;
+
+    ResultSet  dados = stm.executeQuery() ;
+%>    
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,8 +70,8 @@
             <div class="menu-dropdown">
                 <a href="#">BUSCAR IMÓVEIS</a>
                 <ul class="submenu">
-                    <li><a href="pages/page_comprar.html">Comprar Imóveis</a></li>
-                    <li><a href="pages/page_alugar.html">Alugar Imóveis</a></li>
+                    <li><a href="pages/page_comprar.jsp">Comprar Imóveis</a></li>
+                    <li><a href="pages/page_alugar.jsp">Alugar Imóveis</a></li>
                 </ul>
             </div>
             <a href="pages/page_sobre.jsp">SOBRE</a>
@@ -143,12 +174,12 @@
             <div id="card-resumo">
                 <h3>Saia do Aluguel</h3>
                 <p> Dê o próximo passo em direção à sua casa dos sonhos. Descubra as melhores opções de compra de casas e comece a construir seu futuro hoje mesmo.</p>
-                <a href="pages/page_comprar.html"><button>Ver Casas à venda</button></a>
+                <a href="pages/page_comprar.jsp"><button>Ver Casas à venda</button></a>
             </div>
             <div id="card-resumo">
                 <h3>Aqui Você Acha</h3>
                 <p>Procurando uma casa perfeita para alugar? Nós simplificamos sua busca. Explore nossa seleção de propriedades para alugar e encontre o lar ideal para sua família.</p>
-                <a href="pages/page_alugar.html"><button>Casas Para Alugar</button></a>
+                <a href="pages/page_alugar.jsp"><button>Casas Para Alugar</button></a>
             </div>
             <div id="card-resumo">
                 <h3>Agende Sua Visita</h3>
@@ -185,6 +216,32 @@
             <h1>Imóveis em Destaque</h1>     
             
             <div id="conteiner-destaques" class="conteiner-destaques">
+
+            <% while(dados.next()) { %> <%-- Abre o loop do WHILE do Jsp --%>
+
+                <%-- Cria o card do imovel de acordo com o banco de dados --%>
+                <div class="property">
+                    <a href="">
+                        <img src="<% out.print(dados.getString("imagem")); %>" alt="Casa à Venda">
+                        <div class="descricao">
+                            <div class="line-1">
+                                <span class="type-imovel"> <% out.print(dados.getString("tipo_imovel")); %> </span>
+                                <span class="type-negocio"> <% out.print(dados.getString("tipo_transacao")); %> </span>
+                            </div>
+                            <h3 class="bairro"> <% out.print(dados.getString("bairro")); %> </h3>
+                            <span class="cidade"> <% out.print(dados.getString("cidade") + ", " + dados.getString("zona")); %> </span>
+                            <div class="caracteristicas">
+                                <span><i class="ph ph-ruler"></i> <% out.print(dados.getString("area_metros_quadrados")); %> </span>
+                                <span><i class="ph ph-bed"></i> <% out.print(dados.getString("numero_quartos")); %> </span>
+                            </div>
+                            <span class="aluguel-de"></span>
+                            <span class="price">R$ <% out.print(dados.getString("valor")); %> </span>
+                        </div>
+                    </a>
+                </div>
+
+            <% } %> <%-- Fecha o loop do WHILE do JSP --%>
+
             </div>   
 
         </div>

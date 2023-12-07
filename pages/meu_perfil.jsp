@@ -70,8 +70,8 @@
             <div class="menu-dropdown">
                 <a href="#">BUSCAR IMÓVEIS</a>
                 <ul class="submenu">
-                    <li><a href="page_comprar.html">Comprar Imóveis</a></li>
-                    <li><a href="page_alugar.html">Alugar Imóveis</a></li>
+                    <li><a href="page_comprar.jsp">Comprar Imóveis</a></li>
+                    <li><a href="page_alugar.jsp">Alugar Imóveis</a></li>
                 </ul>
             </div>
             <a href="page_sobre.jsp">SOBRE</a>
